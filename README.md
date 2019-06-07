@@ -1,37 +1,37 @@
-#FREC 3004: Environmental Informatics
+# FREC 3004: Environmental Informatics
 
-#Course Syllabus
+# Course Syllabus
 
-#TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
+# TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
 
-#PLACE: 219 War Memorial Gym
+# PLACE: 219 War Memorial Gym
 
-#INSTRUCTOR:    
+# INSTRUCTOR:    
 
 Dr. R. Quinn Thomas
 310B Cheatham Hall
 rqthomas@vt.edu
 Office hours:  Thursdays 3:15 – 4:15
 
-#TEXT: 
-
+# TEXT: 
+ 
 Wickham, Hadley and Garrett Grolemund.  2017. R for Data Science.  O’Reilly Press
 
 Other readings available on Canvas in the Files/Readings folder
 
-#PREREQUISTES:  
+# PREREQUISTES:  
 
 Sophomore standing required. Foundational knowledge in quantitative and computational thinking expected.
 
 
-#LEARNING OBJECTIVES
+# LEARNING OBJECTIVES
 
 -	Apply statistics and modeling to the analysis of environmental data collected at multiple spatial-temporal scales
 -	Demonstrate how to acquire and store environmental data from data repositories
 -	Create visualizations of environmental data, analyses, and uncertainty
 -	Evaluate ethical and methodological issues associated with data curation, quality control, and sharing.
 
-#LEARNING OBJECTIVES ASSOCIATED WITH UNIVERSITY PATHWAYS
+# LEARNING OBJECTIVES ASSOCIATED WITH UNIVERSITY PATHWAYS
 
 -	Explain the application of computational or quantitative thinking across multiple knowledge domains.
 -	Apply the foundational principles of computational or quantitative thinking to frame a question and devise a solution in a particular field of study.
@@ -40,7 +40,7 @@ Sophomore standing required. Foundational knowledge in quantitative and computat
 -	Identify ethical issues in a complex context.
 -	Articulate and defend positions on ethical issues in a way that is both reasoned and informed by the complexities of those situations.
 
-#ASSESSMENT
+# ASSESSMENT
 
 -	Module assignments (60%): Most of class time will be focused on analyzing different environmental dataset.  Each module will help develop different environmental informatics skills.  Each student will submit a written assignment associated with each module.  
 
@@ -48,7 +48,7 @@ Sophomore standing required. Foundational knowledge in quantitative and computat
 o	Thursday, March 7
 o	Thursday, April 25
 
-#COURSE POLICIES:
+# COURSE POLICIES:
 
 -	The course uses the R programming language exclusively.  R is a common language in data science and ecology.  There will be instruction in R throughout the course but this is not a programming course.  R is a free language.  This allows you to use it in your future career without need to purchase a license. 
 
