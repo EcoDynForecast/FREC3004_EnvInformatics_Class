@@ -1,12 +1,12 @@
 # FREC 3004: Environmental Informatics
 
-# Course Syllabus
+Course Syllabus
 
-# TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
+TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
 
-# PLACE: 219 War Memorial Gym
+PLACE: 219 War Memorial Gym
 
-# INSTRUCTOR:    
+INSTRUCTOR:    
 
 Dr. R. Quinn Thomas
 310B Cheatham Hall
