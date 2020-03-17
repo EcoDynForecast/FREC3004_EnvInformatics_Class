@@ -525,9 +525,11 @@ Plot your results
 #INSERT CODE HERE
 ```
 
-**Question 15** Describe the pattern of GCC over this time period.
+**Question 15:**
 
-**Answer 15**
+Describe the pattern of GCC over this time period.
+
+**Answer 15:**
 
 Now that we know how to calculate GCC from multiple images, I know that
 you are capable of repeatig this calculation for a every day of the year
@@ -552,11 +554,11 @@ ggplot() +
   facet_wrap(~ year)
 ```
 
-**Question 15** Describe the pattern that each year follows. Visually
+**Question 15:** Describe the pattern that each year follows. Visually
 estimate the day of year for the start and end of the growing season for
 each year.
 
-**Answer 15 **
+**Answer 15:**
 
 ## Curve Fitting
 
@@ -622,9 +624,9 @@ only has 3 year be careful and double check that they are all complete),
 download its provisional data. Process the 3 day GCC product as we have
 done here.
 
-**Question 12** Plot the camera image
+**Question 12:** Plot the camera image
 
-**Answer 12**
+**Answer 12:**
 
 **Question 13:** Plot the GCC curves with your fitted model and start,
 and end dates displayed as vertical lines.
