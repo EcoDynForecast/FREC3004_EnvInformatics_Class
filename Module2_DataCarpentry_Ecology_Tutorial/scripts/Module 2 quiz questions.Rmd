@@ -1,0 +1,166 @@
+---
+title: "Data Analysis and Visualization Quiz Questions"
+author: "Quinn Thomas"
+date: "1/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Question 1: 
+
+What is the symbol used in R to denote a comment?
+
+```{r}
+
+```
+
+#Question 2: 
+
+Use the function sd() to calculate the standard deviation of the following heights vector:
+
+heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
+
+Provide code as your answer
+
+```{r}
+
+```
+
+
+#Question 3:
+
+Use R to figure out how many people in the heights vector are shorter than 61 inches tall.   Provide code as your answer
+
+```{r}
+
+```
+
+Following questions require this data loaded
+
+```{r}
+download.file(url="https://ndownloader.figshare.com/files/2292169",
+              destfile = "/Users/quinn/Downloads/portal_data_joined.csv")
+surveys <- read.csv("/Users/quinn/Downloads/portal_data_joined.csv")
+```
+
+#Question 4: 
+
+Based in the 1st Challenge Box in the "Starting with data" section,  how many genera (plural of genus) have been recorded during these surveys?
+
+```{r}
+
+```
+
+#Question 5: 
+
+Based on the 2nd Challenge question in the "Starting with data" section, keep the last 6 rows of the surveys dataset. Provide the code as your answer. Your answer should use the nrow() function.
+
+```{r}
+
+```
+
+#Question 6:
+
+Based on the 3rd Challenge Box in the "Starting with data" section, recreate the plot with "undetermined" as the middle bar.   Upload your plot as the answer.
+
+```{r}
+
+
+```
+
+#Question 7:
+
+Based on the 4th Challenge Box in the "Starting with data" section, fix the following data.frame:
+
+`animal_data <- data.frame(animal = c("dog", "sea urchin"),
+                          feel = c("furry", squishy, spiny),
+                          weight = c(45, 8, 1.1, NA))`
+                          
+```{r}
+
+```
+
+The following questions require the data to be reloaded using read_csv
+
+```{r}
+library(tidyverse)
+surveys <- read_csv("/Users/quinn/Downloads/portal_data_joined.csv")
+```
+
+
+#Question 8:
+
+Based on the 1st Challenge Box in the "Manipulating data" section, using pipes, subset the surveys data to exclude animals before 1991 and retain only the columns year, sex, and hindfoot_length.
+
+```{r}
+
+```
+
+
+#Question 9:
+
+Based on the 2nd Challenge Box in the "Manipulating data" section,  create a new data frame from the `surveys` data that meets the following criteria: contains only the `genus` column and a new column called `weight_double` containing values that are double the weight values. In this `weight_double` column, there are no NA values and all values are greater than 200. How many rows are in your new data frame?
+
+```{r}
+
+```
+
+#Question 10
+
+Based on the 3rd Challenge Box in the "Manipulating data" section, Use group_by() and summarize() to find the median weight length for each genus. What is the median weight of the genus "Baiomys"?
+
+```{r}
+
+```
+
+#Question 11
+
+Building on the 3rd question of the 4th Challenge Box of the "Manipulating data" section, calculate the average of each measurement in each year for each different `sex`. Then `pivot_wider()` them into a data set with a column for `hindfoot_length` and `weight`. Hint: You only need to specify the `names_from` and `values_from` columns for pivot_wider().
+
+```{r}
+
+```
+
+The following questions require the following data
+
+```{r}
+
+```
+
+# Question 12
+
+Based on the 2nd Challenge Box of the "Visualizing data" section, create a scatter plot of `weight` vs. `hindfoot_length` with `genus` showing in different colors.
+
+```{r}
+
+```
+
+#Question 13
+
+Based on the 3rd Challenge Box of the "Visualizing data" section, use a voilin plot visualize the distribution of weight within each genus
+
+```{r}
+
+```
+
+#Question 14
+
+Based on the 4th Challenge Box in the "Visualizing data" section, create a plot that depicts how the average weight of each species changes over months
+
+```{r}
+
+```
+
+#Question 15
+
+Use what you just learned in the "Visualizing data" section to create a plot that depicts how the average weight of the species with `species_id == "NL"` changes through the years.  Change the theme of the plot to `theme_classic()`.  Be sure that your figure follows the expections in the figure expectations document on Canvas
+
+```{r}
+                
+```
+
+
+

@@ -1,0 +1,90 @@
+---
+title: "Multi-panel plots with Patchwork"
+author: "Quinn Thomas"
+date: "2/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load necessary packages
+```{r}
+library(tidyverse)
+
+```
+
+```{r echo = FALSE}
+surveys <- read_csv("/Users/quinn/Downloads/portal_data_joined.csv")
+
+surveys_complete <- surveys %>% 
+  filter(!is.na(weight),
+         !is.na(hindfoot_length),
+         !is.na(sex))
+
+species_counts <- surveys_complete %>% 
+  count(species_id) %>% 
+  filter(n >= 50)
+
+surveys_complete <- surveys_complete %>% 
+  filter(species_id %in% species_counts$species_id)
+
+yearly_counts <- surveys_complete %>% 
+  count(year, species_id)
+```
+
+This is the same code used to build the plots in "Arranging and exporting plots"
+
+```{r}
+spp_weight_boxplot <- ggplot(data = surveys_complete,
+                             mapping = aes(x = species_id, y = weight)) +
+  geom_boxplot() +
+  labs(x = "Species", y = "Weight (g)") +
+  scale_y_log10()
+
+spp_count_plot <- ggplot(data = yearly_counts,
+                           mapping = aes(x = year, y = n, color = species_id)) +
+  geom_line() +
+  labs(x = "Year", y = "Abundance")
+```
+
+Instead of using grid.arrange(), we will use the patchwork package.  The patachwork package does not require you to use a function
+
+```{r}
+library(patchwork)
+
+combo_plot <- spp_weight_boxplot + spp_count_plot
+combo_plot
+```
+
+Save the plot with
+
+```{r eval = FALSE}
+ggsave("/fig/combo_plot_abun_weight.png", combo_plot, width = 10, dpi = 300)
+```
+
+# Alternative patchwork combinations
+
+If you want them stacked you use the divide symbol
+
+```{r}
+combo_plot <- spp_weight_boxplot / spp_count_plot
+combo_plot
+```
+
+
+or if you want two stacked and one on the side
+
+```{r}
+combo_plot <- (spp_weight_boxplot / spp_weight_boxplot) | spp_count_plot
+combo_plot
+```
+
+
+
+
+
+
+
+
