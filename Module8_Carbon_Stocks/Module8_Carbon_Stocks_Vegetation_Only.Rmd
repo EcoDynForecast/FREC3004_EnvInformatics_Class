@@ -2,12 +2,12 @@
 title: "Module 9 Carbon Stocks"
 author: 'FREC 3004: Environmental Informatics'
 output: 
-    html_document: default
     github_document: default
+    html_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
 ```{r}
@@ -18,15 +18,13 @@ library(neonUtilities)
 
 ## Science question
 
-How much carbon is stored in forest ecosystems and where in the ecosystem is 
+How much carbon is stored in a forest ecosystem and where in the ecosystem is 
 it stored?
 
 ## Environmental Learning objectives
 
-* Describe how carbon stocks vary between pools (i.e., vegetation vs. soil) and 
-  ecosystem type (i.e., arctic vs. temperate forests) 
+* Describe how vegetation carbon stocks vary between different ecosystem  types 
 * Calculate carbon in trees from individual tree measurements of size
-* Calculate carbon in soil from horizon measurements
 * Scale carbon estimates from the individual tree to the plot (i.e., a set area)
 
 ## Data Science Learning objectives
@@ -121,116 +119,74 @@ tree) in a plot, the density of carbon for each plot (i.e., kg C per m2) is
 calculated by summing across the individual trees and dividing the plot sum by 
 the plot area.
 
-**Calculating soil carbon**
-
-One common method for estimating carbon in soils is by digging a soil pit.  A 
-soil pit is a defined area (i.e., 1 m2) and researchers dig down to set depth 
-(i.e., 1.5 m). As they dig, they divide the pit into soil horizons, measure the 
-depth of each horizon, and separate the soil from each horizon.  Once separated,
-they weight the mass of each horizon and calculate the bulk density, which is 
-the mass of soil (i.e., kg) per volume of the horizon in final units of kg/m3.  
-
-Finally, they save a sample of soil from each horizon and send it to a lab to 
-measure the carbon in the sample.  The carbon in the sample is measured as mass 
-of carbon (i.e, g C) per mass of soil (i.e., g soil). Ultimately to calculate 
-the carbon in a soil pit, you need to use depth of each horizon to get the 
-volume of the horizon.  Then you need to use  the bulk density of each horizon 
-to estimate the mass of soil in each horizon (i.e., kg per horizon).  Then you 
-multiple the mass of soil times the carbon per mass of soil (i.e., kgC/kg soil) 
-to get the soil horizon carbon (i.e., kg C per horizon). By summing up the 
-carbon per horizon, the carbon for the soil pit can be estimated (i.e., kg C/m2).
-
 ## Step 3: Your charge!
 
-I am a client interested in the carbon storage of different ecosystems across 
-the continental U.S. to guide my investment in the California Carbon Market.  
+I am a client interested in the carbon storage in vegetation of different 
+ecosystems across the continental U.S. to guide my investment in the California 
+Carbon Market. 
 
 I need carbon stocks using measurements for the following sites within the 
-National Ecological Observatory Network.  
+National Ecological Observatory Network.  In particular, I am interested in 
+the following sites:
 
-Group 1:
+* Blandy Experimental Farm (BLAN)
+* Bartlett Experimental Forest (BART)
+* Mountain Lake Biological Station (MLBS)
+* Ordway-Swisher Biological Station (OSBS)
 
-* A. Blandy Experimental Farm (BLAN)
-* B. Bartlett Experimental Forest (BART)
-* C. Mountain Lake Biological Station (MLBS)
-* D. Ordway-Swisher Biological Station (OSBS)
 
-Group 2:
+Your charge is to:
 
-* A. Wind River Experimental Forest (WREF)
-* B. Yellowstone Northern Range (Frog Rock) (YELL)
-* C. Caribou-Poker Creeks Research Watershed (BONA)
-* D. Abby Road (ABBY)
-
-I will assign half the class to one group and the other half to the other.  For 
-your group of four sites, your charge is to:
-
-1. Write down and add your hypothesized answer to the following questions to the
-class Google sheet. Explore the descriptions of the NEON sites at 
-neonscience.org, how the sites look on Google Maps, and your general knowledge 
-about ecosystem science to develop your hypotheses. You will write your rank for
+1. Write down and add your hypothesized answer to the following questions. 
+Explore the descriptions of the NEON sites at neonscience.org, how the sites 
+look on Google Maps, and your general knowledge about ecosystem science to 
+develop your hypotheses. You will write your rank for
 each question.
 
-   https://docs.google.com/spreadsheets/d/183I3juYv20EeYd-7xJ5ycYpJGXjxyLYRkrtWcDAw8Fg/edit?usp=sharing
-
-   * What do you think are the patterns in total carbon stocks 
-   (total vegetation + soil) among the sites that I provide you? Based on 
+   * What do you think are the patterns in vegetation carbon stocks 
+   between the four sites that I provide you? Based on 
    information about location and ecosystem type, record what you think the 
    order of the sites is - with a rank of 1 being the most carbon.
    
-   * At each site, hypothesize whether you think vegetation (both living and 
-   dead) or soil carbon will be larger.
-   
-2. Write the code to calculate the total carbon stocks (live trees, standing 
-dead trees, and soils)
+2. Write the code to calculate the in living trees
 
 3. Create a knitted R markdown document that reports the amount of carbon in 
-each stock (live trees, standing dead trees, and soils). The document should 
-include the following:
+live trees. The document should include the following:
 
    * A figure showing the live tree stocks in each tower plot in each year with 
-     measurements
-   * A figure showing the dead tree stocks in each tower plot in each year with 
-     measurements
-   * A bar chart showing how the carbon is distributed among the three carbon 
-     components
-   * A table with summarized values for the site level carbon stocks in the 
-     three carbon components.
+     measurements for each site.  Each site will be a different panel.
+   * A bar chart showing the mean stocks among the four sites.
+   * A table with summarized values for the site level vegetation carbon stocks.
 
+4. Evaluate whether the your data analysis supported your hypothesis from #1
 
-4. Add your estimates for total vegetation and soil carbon to the Google sheet 
-class document. See Step 11 below for the link.
-
-**Important note:**  All values of carbon stocks should be in kg C per m2.  Your
-final vegetation stock numbers for the site should be an average across all 
-'tower' plots.
+**Important note:**  
 
 ## Step 4: Examine data products
 
-NEON data is organized by data product ID in the NEON Date Portal: <https://data.neonscience.org/static/browse.html>
+NEON data is organized by data product ID in the NEON Date Portal: 
+<https://data.neonscience.org/static/browse.html>
  
-You will be using the following data products:
+You will be using the following data product:
 
 * DP1.10098.001 (Woody plant vegetation structure)
-* DP1.00096.001 (Soil physical properties (Megapit))
-* DP1.00097.001 (Soil chemical properties (Megapit))
-      
+
 For each data product summarize the following based on the documents available 
 in "View Product Details" link associated with each data product. Think about 
 the answers to the following questions.
 
 * How is the plot sampling done for each data product?
 * What variables do you need from each data product to calculate the 
-     carbon stocks in vegetation and soil at the site?
+     carbon stocks in vegetation at the site?
 * What measurements are done that will allow for your to calculate 
-     vegetation and soil carbon stocks - refer to Step 2 and the presentation.
+     vegetation stocks - refer to Step 2 and the presentation.
 * How is the data in each product organized?
 
 ## Step 5: Plan analysis
 
-Using the description about how to calculate the vegetation and carbon stocks 
-above, create a bulleted list your plan for calculating tree and soil carbon 
-stocks at your site.
+Using the description about how to calculate the vegetation carbon stocks 
+above, create a bulleted list your plan for calculating tree carbon 
+stocks at the sites.
 
 ## Step 6: Download data
 
@@ -274,7 +230,8 @@ This step will challenge you to develop a workflow using the data science skills
 to calculate the carbon stocks in live trees at your site.  In the end you 
 should have a *site-level* mean carbon stock in *live trees* for each year that 
 was sampled.  Your estimate will be from the plots that are sampling the 
-ecosystem under the flux tower - called "tower plots".  See https://www.neonscience.org/field-sites/field-sites-map/HARV for an example map 
+ecosystem under the flux tower - called "tower plots".  See 
+https://www.neonscience.org/field-sites/field-sites-map/HARV for an example map 
 of a plot with the tower plots labeled.
 
 Hints for calculating carbon in live trees:
@@ -309,43 +266,14 @@ Hints for calculating carbon in live trees:
   only interested in the "Tower" plots.
 * Remember that each plot represents an area of forest where all the trees are 
   measured.  
+* All values of carbon stocks should be in kg C per m2.  You final vegetation 
+  stock numbers for the site should be an average across all 
+  'tower' plots.
 
 Finally, remember to review the description in Step 2 about how to calculate 
 carbon stocks.
 
-## Step 8: Calculate carbon in dead trees
-
-You will calculate carbon in standing dead trees using the same approach as used
-for live trees, except changing what you use in the str_detect() function.
-
-## Step 9: Calculate carbon in soils
-
-This step will challenge you to develop a workflow using the data science skills
-to calculate the carbon stocks in the soil at your site.  In the end you should 
-have an estimate of soil carbon from the soil Megapit. 
-
-In the NEON data, the bulk density is in the physical soil data product while 
-measurements of the carbon in the sample are the soil biogeochemistry data 
-product.  You will need to download both and join the tables.
-
-Hints for calculating carbon in soil:
-
-* Be sure to use the create depth variables, some cover all depths while others 
-  do not
-* Use the organic carbon variable rather than the total carbon
-* Be careful about units and conversions
-* Be careful about the type of horizon measurements.  Some are the 
-  original measurement and some are remeasurements to audit the original 
-  measurement. Using both will mess up your analysis.
-
-```{r}
-#Download biogeochemistry soil data to get carbon concentration
-soil_biogeochem <- "DP1.00097.001"
-#Download physical soil data to get bulk density
-soil_physics <- "DP1.00096.001"
-```
-
-## Step 10: Create report
+## Step 8: Create report
 
 Again, I am looking for:
 
@@ -356,12 +284,8 @@ Again, I am looking for:
 * A bar chart showing the carbon in the three carbon components
 * Summarized table of values for the site level carbon stocks in the three 
   carbon components.
+* Text describing whether your data analysis supported your hypothesis from #1
+  and, if not, possible reasons why it did not.
 
 Be sure your figures are complete with units, labels, and a title.  Be sure your
 figures are legible when knitted.
-
-## Step 11:  Add your calculations to the class Google sheet
-
-Add your site-level data to the google sheet table
-
-The link can be found here: https://docs.google.com/spreadsheets/d/1Byxiy5uLMplqDTmBIhVEYx0JScDUAzFa832lwYR4qr4/edit?usp=sharing
