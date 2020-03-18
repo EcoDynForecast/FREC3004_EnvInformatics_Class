@@ -501,7 +501,7 @@ library(lubridate)</code></pre>
 <p>Look at the imported data. Did it work? Look at the file again in a text editor (i.e., In RStudio you can open the file, file -&gt; open file).<br />
 What is line number has the header row? Is there a symbol that designates a comment in the file?</p>
 <p>Now use the comment option in the read_delim. You will need to add the comment symbol below in place of [INSERT SYMBOL]</p>
-<pre class="r"><code>stream_data &lt;- read_delim(&quot;data/site_05464420.txt&quot;, 
+<pre class="r"><code>stream_data &lt;- read_delim(&quot;data_raw/site_05464420.txt&quot;, 
                           delim = &quot;\t&quot;, 
                           comment = &quot;[INSERT SYMBOL]&quot;)</code></pre>
 <p>Do the headers look good now?</p>
@@ -585,7 +585,7 @@ end_date &lt;- </code></pre>
 url</code></pre>
 <p>Now download the file at the web address using R</p>
 <pre class="r"><code>download.file(url = url,
-              dest = paste0(&quot;data/site_&quot;, site, &quot;.txt&quot;))</code></pre>
+              dest = paste0(&quot;data_raw/site_&quot;, site, &quot;.txt&quot;))</code></pre>
 <p>We are now one step closer to automating.</p>
 <p>Second, we need to be able to loop through a vector of different sites and download each of those sites. We will use the concept of a “for loop”.</p>
 <p>Create a vector of sites. The following was obtained from the USGS website and represents all of the active sites in Iowa</p>
@@ -666,9 +666,9 @@ for (i in 1:length(site)) {
                                begin_date, 
                                &quot;&amp;end_date=&quot;, 
                                end_date),
-                dest = paste0(&quot;data/&quot;, site[i], &quot;.txt&quot;))
+                dest = paste0(&quot;data_raw/&quot;, site[i], &quot;.txt&quot;))
 
-  stream_data &lt;- read_delim(paste0(&quot;data/&quot;, site[i], &quot;.txt&quot;), 
+  stream_data &lt;- read_delim(paste0(&quot;data_raw/&quot;, site[i], &quot;.txt&quot;), 
                             delim = &quot;\t&quot;, 
                             comment = &quot;#&quot;)
   
@@ -715,8 +715,13 @@ print(site_exceed)</code></pre>
 
 print(site_exceed)</code></pre>
 <p><strong>Optional Question 6:</strong></p>
-<p>Is the probability of exceeding the EPA threshold changing over time?</p>
+<p>Is the probability of exceeding the EPA threshold changing over time? Show with a plot.</p>
 <p><strong>Optional Answer 6:</strong></p>
+<pre class="r"><code>ggplot(data = site_exceed_combined, mapping = aes(x = years, y = exceed)) +
+  geom_line() +
+  geom_point() +
+  labs(x = &quot;Year&quot;, y = &quot;Proability of Exceeding EPA Threshold&quot;, 
+       title = &quot;Iowa: Proabability of nitrate exceeding EPA threshold&quot;)</code></pre>
 </div>
 <div id="reference" class="section level2">
 <h2>Reference</h2>

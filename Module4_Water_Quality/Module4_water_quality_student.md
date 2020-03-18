@@ -202,7 +202,7 @@ Now use the comment option in the read\_delim. You will need to add the
 comment symbol below in place of \[INSERT SYMBOL\]
 
 ``` r
-stream_data <- read_delim("data/site_05464420.txt", 
+stream_data <- read_delim("data_raw/site_05464420.txt", 
                           delim = "\t", 
                           comment = "[INSERT SYMBOL]")
 ```
@@ -379,7 +379,7 @@ Now download the file at the web address using R
 
 ``` r
 download.file(url = url,
-              dest = paste0("data/site_", site, ".txt"))
+              dest = paste0("data_raw/site_", site, ".txt"))
 ```
 
 We are now one step closer to automating.
@@ -420,17 +420,6 @@ for (i in 1:10) {
 }
 ```
 
-    ## [1] 1
-    ## [1] 2
-    ## [1] 3
-    ## [1] 4
-    ## [1] 5
-    ## [1] 6
-    ## [1] 7
-    ## [1] 8
-    ## [1] 9
-    ## [1] 10
-
 We can use this current value of i to subset the site vector. Note that
 we change the highest value in the loop from 10 to the length of the
 site vector
@@ -440,23 +429,6 @@ for (i in 1:length(site)) {
   print(site[i])
 }
 ```
-
-    ## [1] "05412500"
-    ## [1] "05418400"
-    ## [1] "05418720"
-    ## [1] "05420500"
-    ## [1] "05455100"
-    ## [1] "05465500"
-    ## [1] "05464420"
-    ## [1] "05481000"
-    ## [1] "05482000"
-    ## [1] "05482300"
-    ## [1] "05482500"
-    ## [1] "05483600"
-    ## [1] "05484000"
-    ## [1] "05484500"
-    ## [1] "06808500"
-    ## [1] "06817000"
 
 Now we can use the subsetted site vector to modify the site value in the
 url.  
@@ -524,9 +496,9 @@ for (i in 1:length(site)) {
                                begin_date, 
                                "&end_date=", 
                                end_date),
-                dest = paste0("data/", site[i], ".txt"))
+                dest = paste0("data_raw/", site[i], ".txt"))
 
-  stream_data <- read_delim(paste0("data/", site[i], ".txt"), 
+  stream_data <- read_delim(paste0("data_raw/", site[i], ".txt"), 
                             delim = "\t", 
                             comment = "#")
   
@@ -613,8 +585,18 @@ print(site_exceed)
 **Optional Question 6:**
 
 Is the probability of exceeding the EPA threshold changing over time?
+Show with a plot.
 
-**Optional Answer 6:**
+**Optional Answer
+6:**
+
+``` r
+ggplot(data = site_exceed_combined, mapping = aes(x = years, y = exceed)) +
+  geom_line() +
+  geom_point() +
+  labs(x = "Year", y = "Proability of Exceeding EPA Threshold", 
+       title = "Iowa: Proabability of nitrate exceeding EPA threshold")
+```
 
 ## Reference
 

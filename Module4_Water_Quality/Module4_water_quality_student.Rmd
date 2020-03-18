@@ -205,7 +205,7 @@ Now use the comment option in the read_delim.   You will need to add the comment
 symbol below in place of [INSERT SYMBOL]
 
 ```{r}
-stream_data <- read_delim("data/site_05464420.txt", 
+stream_data <- read_delim("data_raw/site_05464420.txt", 
                           delim = "\t", 
                           comment = "[INSERT SYMBOL]")
 
@@ -378,7 +378,7 @@ Now download the file at the web address using R
 
 ```{r}
 download.file(url = url,
-              dest = paste0("data/site_", site, ".txt"))
+              dest = paste0("data_raw/site_", site, ".txt"))
 ```
 
 We are now one step closer to automating.
@@ -430,7 +430,7 @@ for (i in 1:length(site)) {
 Now we can use the subsetted site vector to modify the site value in the url.  
 See that we replaced site with site[i]
 
-```{r eval = FALSE}
+```{r}
 for (i in 1:length(site)) {
   url <- paste0("https://nwis.waterdata.usgs.gov/usa/nwis/uv/?cb_99133=on&format=rdb&site_no=", 
                 site[i], 
@@ -493,9 +493,9 @@ for (i in 1:length(site)) {
                                begin_date, 
                                "&end_date=", 
                                end_date),
-                dest = paste0("data/", site[i], ".txt"))
+                dest = paste0("data_raw/", site[i], ".txt"))
 
-  stream_data <- read_delim(paste0("data/", site[i], ".txt"), 
+  stream_data <- read_delim(paste0("data_raw/", site[i], ".txt"), 
                             delim = "\t", 
                             comment = "#")
   
@@ -548,7 +548,7 @@ your answer prints out to the document when you knit it.
 
 **Answer 3:**
 
-```{r eval = FALSE}
+```{r}
 #INSERT CODE
 print(site_exceed)
 ```
@@ -585,9 +585,18 @@ print(site_exceed)
 
 **Optional Question 6:**
 
-Is the probability of exceeding the EPA threshold changing over time?
+Is the probability of exceeding the EPA threshold changing over time? Show with
+a plot.
 
 **Optional Answer 6:**
+
+```{r}
+ggplot(data = site_exceed_combined, mapping = aes(x = years, y = exceed)) +
+  geom_line() +
+  geom_point() +
+  labs(x = "Year", y = "Proability of Exceeding EPA Threshold", 
+       title = "Iowa: Proabability of nitrate exceeding EPA threshold")
+```
 
 
 ## Reference
