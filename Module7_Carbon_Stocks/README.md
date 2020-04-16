@@ -1,11 +1,12 @@
 # Model 7: Terrestrial Carbon Stocks
 
+## Class Time
 
-## Option 1: Students only analyze live vegetation carbon stocks
+### Option 1: Students only analyze live vegetation carbon stocks
 
 3 - 1 hr 15 min class periods
 
-## Option 2: Students only analyze live vegetation, dead vegetation and soil carbon stocks
+### Option 2: Students only analyze live vegetation, dead vegetation and soil carbon stocks
 
 4 - 1 hr 15 min class periods
 
