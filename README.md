@@ -6,13 +6,13 @@ TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
 
 INSTRUCTOR:    Dr. R. Quinn Thomas
 
-# TEXT: 
+# TEXT 
  
 Wickham, Hadley and Garrett Grolemund.  2017. R for Data Science.  O’Reilly Press
 
 Other readings available on Canvas in the Files/Readings folder
 
-# PREREQUISTES:  
+# PREREQUISTES  
 
 Sophomore standing required. Foundational knowledge in quantitative and computational thinking expected.
 
