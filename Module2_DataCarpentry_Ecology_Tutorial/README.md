@@ -37,13 +37,12 @@ Paper: https://doi.org/10.1890/08-1222.1
 
 ## Learning Objectives
 
-I follow the Data Carpentary material except for teach the R and SQL sub-modules
+The same learning objectives for the Data Carpentary module.
 
-I teach using live coding and give students time to work through the challenge questions in class
-
-The students are required to do online quizes via our LMS (Canvas) between each class. They have two chances to take the quiz and I record the highest grade.  There are about 5 questions per quiz and the answers are automatically graded on Canvas.
-
-Later modules in the class teach provide training in joins, for-loops, and if-else statements
+* I follow the Data Carpentary material except for teach the R and SQL sub-modules
+* I teach using live coding and give students time to work through the challenge questions in class
+* The students are required to do online quizes via our LMS (Canvas) between each class. They have two chances to take the quiz and I record the highest grade.  There are about 5 questions per quiz and the answers are automatically graded on Canvas.
+* Later modules in the class teach provide training in joins, for-loops, and if-else statements
 
 ## Reference for module material
 
