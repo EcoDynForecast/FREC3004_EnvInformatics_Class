@@ -109,7 +109,7 @@ water quality data.
 
 1.	Explore federal regulatory guidelines. The US Environmental Protection 
 Agency lists water quality regulations for both Human Drinking 
-Water <http://water.epa.gov/drink/contaminants/index.cfm>
+Water <https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations>
 
 a.	What is the Maximum Contaminant Level (MCL) for nitrate (reported as nitrate
     -nitrogen) in mg/L.
@@ -151,7 +151,7 @@ answer this question, we will first explore the variability of nitrate within
 this river. 
 
 *	Open the U.S. Geological Survey’s “Water Quality Watch” web 
-    page: <http://waterwatch.usgs.gov/wqwatch/>
+    page: <https://waterwatch.usgs.gov/wqwatch/>
 * Under the “State” menu, select “Iowa” and allow the map to refresh.
 * Under the measurement menu, select “Nitrate.”
 * Move your mouse over the available triangles until you find “Cedar River at 
@@ -514,7 +514,7 @@ for (i in 1:length(site)) {
 
 #combine the site ID and exceed columns into a data frame (tibble)
 site_exceed_combined <- tibble(site = site, 
-                               exceed = exceed)
+                               exceed = site_exceed)
 print(site_exceed_combined)
 ```
 
@@ -539,7 +539,7 @@ the probability of exceeding the EPA threshold for all gauges in Virginia
 between 2014-04-01 and 2014-09-01?
 
 You will get the list of Virginia gauges by 
-1) Going to https://waterwatch.usgs.gov/
+1) Going to https://waterwatch.usgs.gov/wqwatch/
 2) Selecting Virginia and Nitrate from the drop-down options
 3) Clicking "Site List"
 

@@ -6,6 +6,7 @@ FREC 3004: Environmental Informatics
 library(tidyverse)
 library(lubridate)
 library(neonUtilities)
+library(knitr)
 ```
 
 ## Science question
@@ -66,42 +67,43 @@ ecosystem is it stored?
   - add\_predictions()
   - add\_residuals()
   - make\_datetime()
-  - creating simple functions
+  - Creating simple functions
 
 ## R knowledge covered in module
 
-  - NEON API (zipsByProduct() and stackByTable())
+  - NEON specific functions (stackByTable())
 
-## Step 1: Background on carbon and climate
+## Background on carbon and climate
 
 Estimating carbon storage is important for quantifying the climate
 mitigation benefit provided by an ecosystem. Carbon that is stored in an
-ecosystem is carbon that is not in the atmosphere and contributing to
-climate change. Carbon storage is quantified by adding up the carbon in
-different “stocks” of carbon within the ecosystem, with vegetation and
-soils being the most important stocks in most terrestrial ecosystems.
+ecosystem is carbon that is not in the atmosphere and thus not
+contributing to climate change. Carbon storage is quantified by adding
+up the carbon in different “stocks” of carbon within the ecosystem, with
+vegetation and soils being the most important stocks in most terrestrial
+ecosystems.
 
 Importantly, this is a different perspective than Module 6 where you
 analyzed the flux of carbon into or out of an ecosystem (NEP). The
 carbon flux is the *rate* that carbon is stored while the carbon stocks
 are the amount of carbon that is already present. As an example, a young
-forest may have low carbon stocks but high NEP while an older forest may
-have high carbon stocks but low NEP.
+forest may have low carbon stocks but high NEP (Net Ecosystem Exchange
+from Module 6) while an older forest may have high carbon stocks but low
+NEP.
 
-## Step 2: Background on estimating carbon stocks
-
-**Calculating total biomass of trees**
+## Background on estimating carbon stocks
 
 One common approach to estimating carbon in woody vegetation is by
 measuring the diameter of each individual tree over a certain size in a
-set area (called a plot). The diameter of each tree is converted to
-biomass using allometric relationships between the diameter and biomass.
-Allometric relationships are statistical relationships that are created
-by measuring a tree’s diameter before cutting down and weighing it. A
-general relationship for a species can be created by combining these
-harvested trees into a single analysis. Allometric relationships
-typically estimate aboveground biomass which needs to be converted to
-carbon by multiplying by 0.5 (biomass is about 50% carbon).
+set area (called a plot). The diameter of each tree is converted to mass
+(called biomass) using equations that use diameter to predict biomass
+(called allometric relationships). Allometric relationships are
+statistical relationships that are created by measuring a tree’s
+diameter before cutting down and weighing it. A general relationship for
+a species can be created by combining these harvested trees into a
+single analysis. Allometric relationships typically estimate aboveground
+biomass which needs to be converted to carbon by multiplying by 0.5
+(biomass is about 50% carbon).
 
 Total biomass of a tree is the sum of aboveground and belowground
 carbon. Since belowground carbon is less commonly measured (it requires
@@ -114,7 +116,7 @@ per tree) in a plot, the density of carbon for each plot (i.e., kg C per
 m2) is calculated by summing across the individual trees and dividing
 the plot sum by the plot area.
 
-## Step 3: Your charge\!
+## Your charge\!
 
 I am a client interested in the carbon storage in vegetation of
 different ecosystems across the continental U.S. to guide my investment
@@ -129,39 +131,25 @@ interested in the following sites:
   - Mountain Lake Biological Station (MLBS)
   - Ordway-Swisher Biological Station (OSBS)
 
-Your charge is to:
+### Part 1: Develop hypotheses
 
-1.  Write down and add your hypothesized answer to the following
-    questions. Explore the descriptions of the NEON sites at
-    neonscience.org, how the sites look on Google Maps, and your general
-    knowledge about ecosystem science to develop your hypotheses. You
-    will write your rank for each question.
-    
-      - What do you think are the patterns in vegetation carbon stocks
-        between the four sites that I provide you? Based on information
-        about location and ecosystem type, record what you think the
-        order of the sites is - with a rank of 1 being the most carbon.
+Explore the descriptions of the NEON sites at
+<https://www.neonscience.org/field-sites/field-sites-map/list>, how the
+sites look on the satallite image in the site description, and your
+general knowledge about ecosystem science to develop your hypothesized
+for the following question:
 
-2.  Write the code to calculate the in living trees
+  - Based on information about location and ecosystem type, rank the
+    sites in order of 1 = most vegetation carbon, 4 = least vegetation
+    carbon
 
-3.  Create a knitted R markdown document that reports the amount of
-    carbon in live trees. The document should include the following:
-    
-      - A figure showing the live tree stocks in each tower plot in each
-        year with measurements for each site. Each site will be a
-        different panel.
-      - A bar chart showing the mean stocks among the four sites.
-      - A table with summarized values for the site level vegetation
-        carbon stocks.
+  - Provide justification for your ranking.
 
-4.  Evaluate whether the your data analysis supported your hypothesis
-    from \#1
+### Part 2: Examine data products
 
-**Important note:**
+Examine data products
 
-## Step 4: Examine data products
-
-NEON data is organized by data product ID in the NEON Date Portal:
+NEON data is organized by data product ID in the NEON Data Portal:
 <https://data.neonscience.org/static/browse.html>
 
 You will be using the following data product:
@@ -170,7 +158,7 @@ You will be using the following data product:
 
 For each data product summarize the following based on the documents
 available in “View Product Details” link associated with each data
-product. Think about the answers to the following questions.
+product. Answers to the following questions.
 
   - How is the plot sampling done for each data product?
   - What variables do you need from each data product to calculate the
@@ -179,58 +167,59 @@ product. Think about the answers to the following questions.
     vegetation stocks - refer to Step 2 and the presentation.
   - How is the data in each product organized?
 
-## Step 5: Plan analysis
+## Part 3: Plan analysis
 
 Using the description about how to calculate the vegetation carbon
-stocks above, create a bulleted list your plan for calculating tree
-carbon stocks at the sites.
+stocks above, create a bulleted list that outlines your plan for
+calculating tree carbon stocks for each of the four sites.
 
-## Step 6: Download data
+## Part 4: Download and merge NEON data
 
-First, define the site ID
+To download the data from NEON, use the following steps
 
-``` r
-site <- "ORNL"
-```
+  - Go to the NEON data portal: <https://data.neonscience.org/home>
+  - In “Get Started..” type: Woody plant vegetation structure
+  - Scroll to “Woody plant vegetation structure”. It has the Data
+    Product number: DP1.10098.001
+  - Click Download Data
+  - Select the four sites above
+  - Select “All years” then click “NEXT”
+  - Click “Include” for “Do you want to include documentation?” “NEXT”
 
-and the data product ID
+**Answer the following question:** Are using the data in a way that
+meets NEON Data Usage and Citation Policies?
 
-``` r
-data_product <- "DP1.10098.001"
-```
+  - If so, Check Yes and then NEXT
+  - Click “DOWNLOAD DATA”
 
-Second, use the `zipsByProduct()` function to download files via NEON’s
-API
-
-``` r
-zipsByProduct(dpID=data_product, site=site, 
-                package="basic", check.size=F,
-                savepath = NA)
-```
-
-Third, since NEON data is organized by month and each monthly data
-package as multiple data tables, NEON has created a function to combined
-tables across months. Use this function `stackByTable()` to create
-tables with the full time series
+The files that you downloaded have the data spread across multiple files
+for different months at each site. To combine all the sites and months
+into a single file use the following code:
 
 ``` r
-stackByTable(filepath= "filesToStack10098/",
+stackByTable(filepath= "data_raw/NEON_struct-woody-plant/",
              folder=T)
 ```
 
-Look in the `filesToStack10098` folder for the files. There may be
-multiple csv files, xml, and README files. You will need to open the
-csvs and consult the NEON documentation to understand what variables are
-in what tables.
+Confirm that a set of files are in a new folder:
 
-## Step 7: Calculate carbon in live trees
+`data_raw/NEON_struct-woody-plant/stackedFiles`
+
+There will be multiple csv files and a README files. You will need to
+open the csvs and consult the NEON documentation to understand what
+variables are in what tables.
+
+After you have confirmed that the files are in the folder, set the `eval
+= FALSE` in the chunk
+
+## Part 5: Calculate carbon in live trees
 
 This step will challenge you to develop a workflow using the data
-science skills to calculate the carbon stocks in live trees at your
-site. In the end you should have a *site-level* mean carbon stock in
-*live trees* for each year that was sampled. Your estimate will be from
-the plots that are sampling the ecosystem under the flux tower - called
-“tower plots”. See
+science skills to calculate the carbon stocks in live trees at each of
+the four sites. For each site, you should have a *site-level* mean
+carbon stock in *live trees* for each year that was sampled. Your
+estimate will be from the plots that are sampling the ecosystem under
+the flux tower - called “tower plots”. See
 <https://www.neonscience.org/field-sites/field-sites-map/HARV> for an
 example map of a plot with the tower plots labeled.
 
@@ -239,11 +228,11 @@ Hints for calculating carbon in live trees:
   - Remember that individual trees are within plots that have a set
     area.  
     Individual trees and plots are remeasured through time.
-  - Use `filter(str_detect(plantStatus,"Live")` to select for the live
-    trees.  
-    The `str_detect()` function will find the rows with “Live” anywhere
-    in variable character string. This is necessary because there are
-    multiple types of live trees.
+  - The `plantStatus` column has whether the tree was live at the time
+    of measurement, but there are multiple types of live trees. Be sure
+    your analysis includes all the types of live trees. You may need to
+    use string manipulation and filter functions in the `stringr`
+    package.
   - Remember that only 50% of biomass is carbon so you will need to
     convert from biomass to carbon
   - Assume that belowground biomass (i.e., roots) is 30% of aboveground
@@ -260,14 +249,17 @@ Hints for calculating carbon in live trees:
     organization for the California Carbon Exchange) provides allometric
     relationships to use. The allometric equations for each species can
     be found in the file “Allometrics.csv” on modules. Places this file
-    in you data sub-directory. You will need to join the parameters in
-    “Allometrics.csv”" to your data frame with the diameter
-    measurements. If a species is not in the list of allometric
-    relationships it should have an NA when you join, just pick one set
-    of allometric parameters to to use and assign it to all species with
-    NAs (these are very uncommon species to it won’t influence your
-    answer much). The parameters we use come from Table 4 in the Jenkins
-    et al. 2003 paper on Canvas.
+    in you `data_raw` directory. You will need to join the parameters in
+    “Allometrics.csv” to your data frame with the diameter measurements.
+    If a species is not in the list of allometric relationships it
+    should have an NA when you join, just pick one set of allometric
+    parameters to to use and assign it to all species with NAs (these
+    are very uncommon species to it won’t influence your answer much).
+    The parameters we use come from Table 4 in the Jenkins et al. 2003
+    paper on Canvas.
+  - The equation for coverting diameter to biomass is at the bottom of
+    Table 4 in Jenkins et al. 2003. The equation uses B0 and B1 from
+    “Allometrics.csv”.
   - The site level value is the average across plots. Don’t forget that
     we are only interested in the “Tower” plots.
   - Remember that each plot represents an area of forest where all the
@@ -276,22 +268,42 @@ Hints for calculating carbon in live trees:
     vegetation stock numbers for the site should be an average across
     all ‘tower’ plots.
 
-Finally, remember to review the description in Step 2 about how to
-calculate carbon stocks.
+Remember to review the description in **Background on estimating carbon
+stocks** about how to calculate carbon stocks.
 
-## Step 8: Create report
+``` r
+#INSERT CODE
+```
 
-Again, I am looking for:
+## Part 6: Create report
 
-  - A figure showing the live tree stocks in each tower plot in each
-    year with measurements
-  - A figure showing the dead tree stocks in each tower plot in each
-    year with measurements
-  - A bar chart showing the carbon in the three carbon components
-  - Summarized table of values for the site level carbon stocks in the
-    three carbon components.
+I am looking the following plots, tables, and text in the Rmarkdown
+document:
+
+  - A figure showing the average live tree carbon stocks in each site
+    and year
+
+<!-- end list -->
+
+``` r
+#INSERT CODE
+```
+
+  - Summarized table of values for the site level carbon stocks averaged
+    across year (use the `kable()` function to generate a clean looking
+    table).
+
+<!-- end list -->
+
+``` r
+#INSERT CODE
+```
+
+  - Text describing issues that you had with your analysis, concerns you
+    have with your analysis, concerns you have with the data
+
   - Text describing whether your data analysis supported your hypothesis
-    from \#1 and, if not, possible reasons why it did not.
+    from Part \#1 and, if not, possible reasons why it did not.
 
 Be sure your figures are complete with units, labels, and a title. Be
 sure your figures are legible when knitted.

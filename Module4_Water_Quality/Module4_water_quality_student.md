@@ -101,7 +101,8 @@ publicly available EPA water quality data.
 
 1.  Explore federal regulatory guidelines. The US Environmental
     Protection Agency lists water quality regulations for both Human
-    Drinking Water <http://water.epa.gov/drink/contaminants/index.cfm>
+    Drinking Water
+    <https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations>
 
 <!-- end list -->
 
@@ -517,7 +518,7 @@ for (i in 1:length(site)) {
 
 #combine the site ID and exceed columns into a data frame (tibble)
 site_exceed_combined <- tibble(site = site, 
-                               exceed = exceed)
+                               exceed = site_exceed)
 print(site_exceed_combined)
 ```
 

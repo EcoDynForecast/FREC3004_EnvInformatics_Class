@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="FREC 3004: Environmental Informatics" />
 
 
-<title>Module 4: Water Quality</title>
+<title>Module 9 Carbon Stocks</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -255,9 +255,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -271,7 +269,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -288,8 +285,6 @@ summary {
 </style>
 
 
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
 
@@ -335,6 +330,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -347,20 +343,17 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -369,39 +362,40 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Module 4: Water Quality</h1>
-<h4 class="author"><em>FREC 3004: Environmental Informatics</em></h4>
+<h1 class="title toc-ignore">Module 9 Carbon Stocks</h1>
+<h4 class="author">FREC 3004: Environmental Informatics</h4>
 
 </div>
 
 
 <pre class="r"><code>library(tidyverse)
-library(lubridate)</code></pre>
+library(lubridate)
+library(neonUtilities)
+library(knitr)</code></pre>
 <div id="science-question" class="section level2">
 <h2>Science question</h2>
-<p>How often do rivers in the U.S. exceed the EPA limit for water quality?</p>
+<p>How much carbon is stored in a forest ecosystem and where in the ecosystem is it stored?</p>
 </div>
 <div id="environmental-learning-objectives" class="section level2">
-<h2>Environmental Learning Objectives:</h2>
+<h2>Environmental Learning objectives</h2>
 <ul>
-<li>Understand the variability of concentrations of dissolved substances in stream water and identify some reasons for this variability.</li>
-<li>Find regulatory guidelines for nitrate concentrations in surface water, find real-time nitrate concentration data, and recognize when observed concentrations exceed guidelines</li>
-<li>Evaluate natural and anthropogenic factors that cause the concentrations of nitrate to change over time</li>
-<li>Define the meaning of “statistical probability,” and use this term as a regulatory tool to evaluate a potential drinking water resource</li>
+<li>Describe how vegetation carbon stocks vary between different ecosystem types</li>
+<li>Calculate carbon in trees from individual tree measurements of size</li>
+<li>Scale carbon estimates from the individual tree to the plot (i.e., a set area)</li>
 </ul>
 </div>
 <div id="data-science-learning-objectives" class="section level2">
-<h2>Data Science Learning Objectives</h2>
+<h2>Data Science Learning objectives</h2>
 <ul>
-<li>Practice importing data sets that aren’t in a standard header format</li>
-<li>Apply if-statements and ifelse()()</li>
-<li>Apply loops for scaling-up analyses</li>
-<li>Pasting strings and numbers together</li>
-<li>Communicating with an API</li>
+<li>Developing a data science analysis plan</li>
+<li>Understands unfamiliar data tables and how they are linked.</li>
+<li>Applying prior data science skills to execute an analysis plan</li>
+<li>Generating an analysis that uses multiple tables of data</li>
+<li>Downloading and processing data from the National Ecological Observatory Network</li>
 </ul>
 </div>
-<div id="assumed-r-knowledge" class="section level2">
-<h2>Assumed R knowledge</h2>
+<div id="assumes-knowledge-of-the-following-in-r" class="section level2">
+<h2>Assumes knowledge of the following in R:</h2>
 <ul>
 <li>mutate()</li>
 <li>group_by()</li>
@@ -414,17 +408,14 @@ library(lubridate)</code></pre>
 <li>filter()</li>
 <li>rename()</li>
 <li>read_csv()</li>
+<li>as.numeric()</li>
 <li>lm()</li>
 <li>rbind()</li>
 <li>geom_abline()</li>
 <li>geom_smooth()</li>
 <li>geom_histogram()</li>
+<li>geom_bar()</li>
 <li>head()</li>
-</ul>
-</div>
-<div id="r-knowledge-covered-in-module" class="section level2">
-<h2>R knowledge covered in module</h2>
-<ul>
 <li>read_delim()</li>
 <li>rename()</li>
 <li>slice()</li>
@@ -435,298 +426,134 @@ library(lubridate)</code></pre>
 <li>ifelse()</li>
 <li>vector()</li>
 <li>geom_hline()</li>
+<li>joins</li>
+<li>str_sub()</li>
+<li>add_predictions()</li>
+<li>add_residuals()</li>
+<li>make_datetime()</li>
+<li>Creating simple functions</li>
 </ul>
 </div>
-<div id="why-this-matters" class="section level2">
-<h2>Why this matters</h2>
-<p>Water is one of the earth’s most precious resources, and is involved in almost many biogeochemical processes. Human activities often lead to problems with water quality. Concentrations of dissolved substances in freshwater varies over time and space, and depends on surrounding anthropogenic factors. Water quality significantly impacts not only ecosystem health (plants, animals, microorganisms, and other species) but also humans who depend on freshwater resources for recreation, tourism, and our very basic needs of waste management and drinking water. This module aims to help students understand the variability of concentrations of dissolved substances in stream water and identify some reasons for this variability. You will explore and evaluate water quality concerns with real-time data from regulatory entities, and learn about water quality ecosystem and human health implications.</p>
-</div>
-<div id="outline" class="section level2">
-<h2>Outline:</h2>
-<ol style="list-style-type: decimal">
-<li>Explore impaired streams and real-time nitrate concentrations</li>
-<li>Download data</li>
-<li>Import data</li>
-<li>Visualize the data</li>
-<li>Analyze the data</li>
-<li>Scaling up to multiple sites</li>
-<li>Analyzing new state</li>
-<li>Analyzing multiple time periods</li>
-</ol>
-</div>
-<div id="step-1-explore-impaired-streams-and-real-time-nitrate-concentrations" class="section level2">
-<h2>Step 1: Explore impaired streams and real-time nitrate concentrations</h2>
-<p>For the second part of this module, we will be further exploring impaired water bodies near us and federal guidelines for safety using publicly available EPA water quality data.</p>
-<p><strong>Question 1:</strong> (provide answers)</p>
-<ol style="list-style-type: decimal">
-<li>Explore federal regulatory guidelines. The US Environmental Protection Agency lists water quality regulations for both Human Drinking Water <a href="https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations" class="uri">https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations</a></li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>What is the Maximum Contaminant Level (MCL) for nitrate (reported as nitrate -nitrogen) in mg/L.</li>
-</ol>
-<pre class="r"><code>EPA_limit &lt;- </code></pre>
-<ol start="2" style="list-style-type: lower-alpha">
-<li><p>What are the potential health impacts of consuming water with concentrations above this limit?</p></li>
-<li><p>What are the common sources of nitrate in water?</p></li>
-</ol>
-</div>
-<div id="step-2-download-data" class="section level2">
-<h2>Step 2: Download data</h2>
-<p>Collect, plot, and explain the water quality data to do an assessment of acute, local, water quality impacts.</p>
-<p>During this portion of the module, you will search for and work with local water quality data, and generate plots that will allow you to further analyze the data, answering questions as you go.</p>
-<p>Watershed managers need to know how often a risk presents itself in a watershed in order for action to be taken. For financially strapped government’s, priority is given to problems that have the highest probability of occurring and which are associated with the most severe impacts. “Blue-baby syndrome” is a condition that leads to infant mortality. It is caused by the ingestion of nitrate in drinking water which subsequently bonds to oxygen sites on hemoglobin in the blood of the infant. This impairs the circulation of oxygen in the bloodstream and causes the baby to turn blue. Obviously, society would like to avoid this outcome.</p>
-<p>Let’s assume that the Cedar River, Iowa, is being considered for use as a drinking water supply by the municipality of Palo, Iowa (note, this is probably not happening in reality). Is this river water safe for human consumption? To answer this question, we will first explore the variability of nitrate within this river.</p>
+<div id="r-knowledge-covered-in-module" class="section level2">
+<h2>R knowledge covered in module</h2>
 <ul>
-<li>Open the U.S. Geological Survey’s “Water Quality Watch” web page: <a href="http://waterwatch.usgs.gov/wqwatch/" class="uri">http://waterwatch.usgs.gov/wqwatch/</a></li>
-<li>Under the “State” menu, select “Iowa” and allow the map to refresh.</li>
-<li>Under the measurement menu, select “Nitrate.”</li>
-<li>Move your mouse over the available triangles until you find “Cedar River at Blairs Ferry Rd, at Palo, IA.” This triangle is equidistant from the top (North) and the bottom (South) of the map, and about an inch to the left of the right (East) boundary of the state.</li>
-<li>Once you find it, click once on the triangle, and the click again on the eight-digit hydrologic unit code (HUC) number “05464420” which identifies this site.</li>
-<li>Now you are in the official USGS data site for the Cedar River at Blairs Ferry Rd, Palo, IA. Scroll down and explore the plots of the available data. We would like to see whether nitrate concentrations change over the course of the agricultural season.<br />
-</li>
-<li>Scroll back up to the box labelled “Available Parameters.”</li>
-<li>Uncheck all except for “NO3+NO2,water,insitu”</li>
-<li>Change the starting date to April 1, 2014 and the end date to September 1, 2014. Enter these dates in YEAR-MO-DY format (i.e. 2014-04-01, and 2014-09-01, respectively).</li>
-<li>Under the heading “Output Format,” select the “Tab-separated” circle and click “GO.”</li>
-<li>Copy the data into a text file (in RStudio: File -&gt; New file -&gt; Text File) and save as <code>site_05464420.txt</code> into your data directory for this module (you should have creating a Module 4 directory with different sub directories for data, etc. and a R project for the Module).</li>
+<li>NEON specific functions (stackByTable())</li>
 </ul>
 </div>
-<div id="step-3-import-data" class="section level2">
-<h2>Step 3: Import data</h2>
-<p>Try reading in the data with the <code>read_csv()</code> function</p>
-<pre class="r"><code>#INSERT CODE</code></pre>
-<p>Did it work? Now open the file in a text editor. How is this file different that other files we have worked with? What are the header rows?</p>
-<p>Try a more general function (<code>read_delim()</code>) for import files that are not comma delimitated. &quot; for the delim tells the function to look for a tab to separate the cells.</p>
-<pre class="r"><code>stream_data &lt;- read_delim(&quot;data_raw/site_05464420.txt&quot;, delim = &quot;\t&quot;)</code></pre>
-<p>Look at the imported data. Did it work? Look at the file again in a text editor (i.e., In RStudio you can open the file, file -&gt; open file).<br />
-What is line number has the header row? Is there a symbol that designates a comment in the file?</p>
-<p>Now use the comment option in the read_delim. You will need to add the comment symbol below in place of [INSERT SYMBOL]</p>
-<pre class="r"><code>stream_data &lt;- read_delim(&quot;data_raw/site_05464420.txt&quot;, 
-                          delim = &quot;\t&quot;, 
-                          comment = &quot;[INSERT SYMBOL]&quot;)</code></pre>
-<p>Do the headers look good now?</p>
-<pre class="r"><code>head(stream_data)</code></pre>
-<p>Which column is the nitrate observation? Let’s give them better names. The number below in <code>rename</code> is the column number</p>
-<pre class="r"><code>stream_data &lt;- stream_data %&gt;% 
-    rename(&quot;nitrate&quot; = 5)</code></pre>
-<p>What is the class of the datetime and nitrate columns?</p>
-<p>Is this what you expected?</p>
-<p>Why might the class be wrong? Look at the top rows of the dataframe and in the raw data. Why is the first row different that all the other rows?</p>
-<p>Now, we need to remove the first row</p>
-<p>There are two ways:</p>
-<ol style="list-style-type: decimal">
-<li><code>stream_data &lt;- stream_data[-1, ]</code> is the way the we learned in the data carpentry module. This removes the first row</li>
-</ol>
-<p>or</p>
-<ol start="2" style="list-style-type: decimal">
-<li>A way that works with tidyverse and pipes. <code>slice</code> is a function that selects particular rows.</li>
-</ol>
-<pre class="r"><code>stream_data &lt;- stream_data %&gt;% 
-    slice(-1)
-
-head(stream_data)</code></pre>
-<p>Now fix the class issue with the <code>datetime</code> and <code>nitrate</code> columns. What is the format of the datatime? Since it has the year, month, day, hour, and minute we will use the <code>ymd_hm()</code> function (this is similar to the <code>ymd()</code> that we used in the data carpentry module)</p>
-<pre class="r"><code>stream_data &lt;- stream_data %&gt;% 
-    mutate(datetime = ymd_hm(datetime))
-head(stream_data)</code></pre>
-<p>Now lets fix the <code>nitrate</code> column by converting from character to numeric using <code>as.numeric()</code></p>
-<pre class="r"><code>#INSERT CODE</code></pre>
-<p>Finally, remove the nitrate missing values</p>
-<pre class="r"><code>#INSERT CODE</code></pre>
-<p>Now combine all data cleaning steps into a single piped command</p>
-<pre class="r"><code>stream_data &lt;- read_delim(&quot;data/site_05464420.txt&quot;, 
-                          delim = &quot;\t&quot;, 
-                          comment = &quot;[INSERT SYMBOL]&quot;)
-stream_data &lt;- stream_data %&gt;% 
-  #[INSERT STEPS FROM ABOVE]
-
-head(stream_data)</code></pre>
+<div id="background-on-carbon-and-climate" class="section level2">
+<h2>Background on carbon and climate</h2>
+<p>Estimating carbon storage is important for quantifying the climate mitigation benefit provided by an ecosystem. Carbon that is stored in an ecosystem is carbon that is not in the atmosphere and thus not contributing to climate change. Carbon storage is quantified by adding up the carbon in different “stocks” of carbon within the ecosystem, with vegetation and soils being the most important stocks in most terrestrial ecosystems.</p>
+<p>Importantly, this is a different perspective than Module 6 where you analyzed the flux of carbon into or out of an ecosystem (NEP). The carbon flux is the <em>rate</em> that carbon is stored while the carbon stocks are the amount of carbon that is already present. As an example, a young forest may have low carbon stocks but high NEP (Net Ecosystem Exchange from Module 6) while an older forest may have high carbon stocks but low NEP.</p>
 </div>
-<div id="step-4-visualize-the-data" class="section level2">
-<h2>Step 4: Visualize the data</h2>
-<p>Create plot with datetime on the x-axis and nitrate on the y-axis (this is a time-series plot of nitrate). Then use the <code>geom_hline()</code> function to add a horizontal line at the EPA concentration (the <code>EPA_limit</code> variable that you defined above)</p>
-<pre class="r"><code>#INSERT PLOT</code></pre>
-<p><strong>Question 2:</strong> Does the location exceed the EPA limit?</p>
-<p><strong>Answer 2:</strong></p>
+<div id="background-on-estimating-carbon-stocks" class="section level2">
+<h2>Background on estimating carbon stocks</h2>
+<p>One common approach to estimating carbon in woody vegetation is by measuring the diameter of each individual tree over a certain size in a set area (called a plot). The diameter of each tree is converted to mass (called biomass) using equations that use diameter to predict biomass (called allometric relationships). Allometric relationships are statistical relationships that are created by measuring a tree’s diameter before cutting down and weighing it. A general relationship for a species can be created by combining these harvested trees into a single analysis. Allometric relationships typically estimate aboveground biomass which needs to be converted to carbon by multiplying by 0.5 (biomass is about 50% carbon).</p>
+<p>Total biomass of a tree is the sum of aboveground and belowground carbon. Since belowground carbon is less commonly measured (it requires digging up the tree roots), we can use ratios of aboveground to belowground carbon from a limited set of trees where the entire tree was extracted to calculate total tree tree carbon.</p>
+<p>Once total tree carbon is calculated for each tree (i.e., units of kg C per tree) in a plot, the density of carbon for each plot (i.e., kg C per m2) is calculated by summing across the individual trees and dividing the plot sum by the plot area.</p>
 </div>
-<div id="step-5-analyze-the-data" class="section level2">
-<h2>Step 5: Analyze the data</h2>
-<p>Calculate the percentage of time that the stream exceeds the EPA limit.</p>
-<p>Hints: you will use the <code>ifelse()</code>, <code>sum()</code>, <code>n()</code>, <code>mutate()</code>, and <code>summarize()</code> functions. The <code>ifelse()</code> function is likely new to you. You use the ifelse() function within the mutate function. For example following code will set the value of <code>new_variable</code> equal to 1 IF ’old_variable<code>is greater than 1, otherwise (i.e., ELSE) set the value of</code>new_variable` equal to 0.</p>
-<p><code>mutate(new_variable = ifelse(old_variable &gt; 1, 1, 0))</code></p>
-<p>Be sure you print out your results for calculating the percentage of time that the steam exceeds the EPA limit so that it shows up in the knitted document.</p>
-<pre class="r"><code>exceed &lt;- stream_data %&gt;% 
-  #INSERT CALCULATIONS TO DETERMINE THE PERCENTAGE OF OBSERVATIONS
-  #THAT EXCEED THE EPA LIMIT
-
-exceed</code></pre>
+<div id="your-charge" class="section level2">
+<h2>Your charge!</h2>
+<p>I am a client interested in the carbon storage in vegetation of different ecosystems across the continental U.S. to guide my investment in the California Carbon Market.</p>
+<p>I need carbon stocks using measurements for the following sites within the National Ecological Observatory Network. In particular, I am interested in the following sites:</p>
+<ul>
+<li>Blandy Experimental Farm (BLAN)</li>
+<li>Bartlett Experimental Forest (BART)</li>
+<li>Mountain Lake Biological Station (MLBS)</li>
+<li>Ordway-Swisher Biological Station (OSBS)</li>
+</ul>
+<div id="part-1-develop-hypotheses" class="section level3">
+<h3>Part 1: Develop hypotheses</h3>
+<p>Explore the descriptions of the NEON sites at <a href="https://www.neonscience.org/field-sites/field-sites-map/list" class="uri">https://www.neonscience.org/field-sites/field-sites-map/list</a>, how the sites look on the satallite image in the site description, and your general knowledge about ecosystem science to develop your hypothesized for the following question:</p>
+<ul>
+<li><p>Based on information about location and ecosystem type, rank the sites in order of 1 = most vegetation carbon, 4 = least vegetation carbon</p></li>
+<li><p>Provide justification for your ranking.</p></li>
+</ul>
 </div>
-<div id="step-6-scaling-up-to-multiple-sites" class="section level2">
-<h2>Step 6: Scaling up to multiple sites</h2>
-<p>Now we want to calculate the probability of exceeding the EPA limit for all gauged streams and river in Iowa. It would be very slow to manual click and download files for all gauges and time points that we are interested in.<br />
-Fortunately there is a way around this that is more advanced (but hey you are studying environmental informatics). The process of automating the download and calculations requires a few new concepts.</p>
-<p>First, many sources of data have an application programming interface (API) that is a set of clearly defined methods of communication. The USGS has a API that will use.</p>
-<p>Copy and paste the following command into a web browser.</p>
-<p><a href="https://nwis.waterdata.usgs.gov/usa/nwis/uv/?cb_99133=on&amp;format=rdb&amp;site_no=05464420&amp;period=&amp;begin_date=2014-04-01&amp;end_date=2014-09-01" class="uri">https://nwis.waterdata.usgs.gov/usa/nwis/uv/?cb_99133=on&amp;format=rdb&amp;site_no=05464420&amp;period=&amp;begin_date=2014-04-01&amp;end_date=2014-09-01</a></p>
-<p>See how this produces the same file as what you downloaded manually.</p>
-<p>Now look at the web address. The format of the web address is the AP. There is “&amp;site_no”, “&amp;begin_date”, “&amp;end_date” in the address. We can modify these to download other sites and other time periods.</p>
-<p>Create a variable called site and set it equal to our focal site number.<br />
-Similarly, create variables for the begin and end date</p>
-<pre class="r"><code>site &lt;- 
-begin_date &lt;- 
-end_date &lt;- </code></pre>
-<p>Now use the <code>paste0()</code> function combine the components of address with the variables to create a new web address where we can easily change the address with new sites and time periods</p>
-<pre class="r"><code>url &lt;- paste0(&quot;https://nwis.waterdata.usgs.gov/usa/nwis/uv/?cb_99133=on&amp;format=rdb&amp;site_no=&quot;, 
-              site, 
-              &quot;&amp;period=&amp;begin_date=&quot;,
-              begin_date, 
-              &quot;&amp;end_date=&quot;, 
-              end_date)
-url</code></pre>
-<p>Now download the file at the web address using R</p>
-<pre class="r"><code>download.file(url = url,
-              dest = paste0(&quot;data_raw/site_&quot;, site, &quot;.txt&quot;))</code></pre>
-<p>We are now one step closer to automating.</p>
-<p>Second, we need to be able to loop through a vector of different sites and download each of those sites. We will use the concept of a “for loop”.</p>
-<p>Create a vector of sites. The following was obtained from the USGS website and represents all of the active sites in Iowa</p>
-<pre class="r"><code>site &lt;- c(&quot;05412500&quot;,
-          &quot;05418400&quot;,
-          &quot;05418720&quot;,
-          &quot;05420500&quot;,
-          &quot;05455100&quot;,
-          &quot;05465500&quot;,
-          &quot;05464420&quot;,
-          &quot;05481000&quot;,
-          &quot;05482000&quot;,
-          &quot;05482300&quot;,
-          &quot;05482500&quot;,
-          &quot;05483600&quot;, 
-          &quot;05484000&quot;, 
-          &quot;05484500&quot;,
-          &quot;06808500&quot;, 
-          &quot;06817000&quot;)</code></pre>
-<p>A “for loop” will increment through a vector. The following example loops through the values 1 through 10 and names the current value of the loop. It prints the current value of i.</p>
-<pre class="r"><code>for (i in 1:10) {
-  print(i)
-}</code></pre>
-<p>We can use this current value of i to subset the site vector. Note that we change the highest value in the loop from 10 to the length of the site vector</p>
-<pre class="r"><code>for (i in 1:length(site)) {
-  print(site[i])
-}</code></pre>
-<p>Now we can use the subsetted site vector to modify the site value in the url.<br />
-See that we replaced site with site[i]</p>
-<pre class="r"><code>for (i in 1:length(site)) {
-  url &lt;- paste0(&quot;https://nwis.waterdata.usgs.gov/usa/nwis/uv/?cb_99133=on&amp;format=rdb&amp;site_no=&quot;, 
-                site[i], 
-                &quot;&amp;period=&amp;begin_date=&quot;, 
-                begin_date, 
-                &quot;&amp;end_date=&quot;, 
-                end_date)
-  print(url)
-}</code></pre>
-<pre class="r"><code>url &lt;- vector(&quot;character&quot;, length = length(site))
-for (i in 1:length(site)) {
-  url[i] &lt;- paste0(&quot;https://nwis.waterdata.usgs.gov/usa/nwis/uv/?cb_99133=on&amp;format=rdb&amp;site_no=&quot;, 
-                site[i], 
-                &quot;&amp;period=&amp;begin_date=&quot;, 
-                begin_date, 
-                &quot;&amp;end_date=&quot;, 
-                end_date)
-}
-print(url)</code></pre>
-<p>Third, combine your code from above that you used to calculate the probability of exceeding the EPA threshold, the API example, and the “for loop”&quot; to calculate the probability of exceeding the EPA threshold for all the streams and rivers in Iowa.</p>
-<pre class="r"><code>#Vector of site numbers
-site &lt;- c(&quot;05412500&quot;,
-          &quot;05418400&quot;,
-          &quot;05418720&quot;,
-          &quot;05420500&quot;,
-          &quot;05455100&quot;,
-          &quot;05465500&quot;,
-          &quot;05464420&quot;,
-          &quot;05481000&quot;,
-          &quot;05482000&quot;, 
-          &quot;05482300&quot;, 
-          &quot;05482500&quot;, 
-          &quot;05483600&quot;, 
-          &quot;05484000&quot;, 
-          &quot;05484500&quot;,
-          &quot;06808500&quot;, 
-          &quot;06817000&quot;) 
-
-#Create a vector to hold the calculation for each gauge
-site_exceed &lt;- vector(&quot;double&quot;, length = length(site)) 
-
-EPA_limit &lt;-
-
-for (i in 1:length(site)) {
-  
-    download.file(url = paste0(&quot;https://nwis.waterdata.usgs.gov/usa/nwis/uv/?cb_99133=on&amp;format=rdb&amp;site_no=&quot;, 
-                               site[i], 
-                               &quot;&amp;period=&amp;begin_date=&quot;, 
-                               begin_date, 
-                               &quot;&amp;end_date=&quot;, 
-                               end_date),
-                dest = paste0(&quot;data_raw/&quot;, site[i], &quot;.txt&quot;))
-
-  stream_data &lt;- read_delim(paste0(&quot;data_raw/&quot;, site[i], &quot;.txt&quot;), 
-                            delim = &quot;\t&quot;, 
-                            comment = &quot;#&quot;)
-  
-  if (ncol(stream_data) &gt; 5) { #THIS IS NEED TO SKIP OVER POTENTIALLY BAD DATA FILES
-  
-    #INSERT CODE FROM ABOVE TO TIDY UP DATA AND CALCULATE THE PROBABILITY OF EXCEEDING THE EPA THRESHOLD
-    
-   
-    
-    site_exceed[i] &lt;- #YOUR CALCULATION FOR THE SITE
-  }else{
-    site_exceed[i] &lt;- NA
-  }
-  
-}
-
-#combine the site ID and exceed columns into a data frame (tibble)
-site_exceed_combined &lt;- tibble(site = site, 
-                               exceed = site_exceed)
-print(site_exceed_combined)</code></pre>
-<p>Fourth, make a bar graph showing the probability of exceeding the EPA threshold for each station in your analysis.</p>
-<p>In the geom_bar(), you will use <code>stat = &quot;identity</code> (which say “just use the y variable that I provide”)</p>
-<p>Be sure your station numbers are readable on the plot.</p>
+<div id="part-2-examine-data-products" class="section level3">
+<h3>Part 2: Examine data products</h3>
+<p>Examine data products</p>
+<p>NEON data is organized by data product ID in the NEON Data Portal: <a href="https://data.neonscience.org/static/browse.html" class="uri">https://data.neonscience.org/static/browse.html</a></p>
+<p>You will be using the following data product:</p>
+<ul>
+<li>DP1.10098.001 (Woody plant vegetation structure)</li>
+</ul>
+<p>For each data product summarize the following based on the documents available in “View Product Details” link associated with each data product. Answers to the following questions.</p>
+<ul>
+<li>How is the plot sampling done for each data product?</li>
+<li>What variables do you need from each data product to calculate the carbon stocks in vegetation at the site?</li>
+<li>What measurements are done that will allow for your to calculate vegetation stocks - refer to Step 2 and the presentation.</li>
+<li>How is the data in each product organized?</li>
+</ul>
+</div>
+</div>
+<div id="part-3-plan-analysis" class="section level2">
+<h2>Part 3: Plan analysis</h2>
+<p>Using the description about how to calculate the vegetation carbon stocks above, create a bulleted list that outlines your plan for calculating tree carbon stocks for each of the four sites.</p>
+</div>
+<div id="part-4-download-and-merge-neon-data" class="section level2">
+<h2>Part 4: Download and merge NEON data</h2>
+<p>To download the data from NEON, use the following steps</p>
+<ul>
+<li>Go to the NEON data portal: <a href="https://data.neonscience.org/home" class="uri">https://data.neonscience.org/home</a></li>
+<li>In “Get Started..” type: Woody plant vegetation structure</li>
+<li>Scroll to “Woody plant vegetation structure”. It has the Data Product number: DP1.10098.001</li>
+<li>Click Download Data</li>
+<li>Select the four sites above</li>
+<li>Select “All years” then click “NEXT”</li>
+<li>Click “Include” for “Do you want to include documentation?” “NEXT”</li>
+</ul>
+<p><strong>Answer the following question:</strong> Are using the data in a way that meets NEON Data Usage and Citation Policies?</p>
+<ul>
+<li>If so, Check Yes and then NEXT</li>
+<li>Click “DOWNLOAD DATA”</li>
+</ul>
+<p>The files that you downloaded have the data spread across multiple files for different months at each site. To combine all the sites and months into a single file use the following code:</p>
+<pre class="r"><code>stackByTable(filepath= &quot;data_raw/NEON_struct-woody-plant/&quot;,
+             folder=T)</code></pre>
+<p>Confirm that a set of files are in a new folder:</p>
+<p><code>data_raw/NEON_struct-woody-plant/stackedFiles</code></p>
+<p>There will be multiple csv files and a README files. You will need to open the csvs and consult the NEON documentation to understand what variables are in what tables.</p>
+<p>After you have confirmed that the files are in the folder, set the <code>eval = FALSE</code> in the chunk</p>
+</div>
+<div id="part-5-calculate-carbon-in-live-trees" class="section level2">
+<h2>Part 5: Calculate carbon in live trees</h2>
+<p>This step will challenge you to develop a workflow using the data science skills to calculate the carbon stocks in live trees at each of the four sites. For each site, you should have a <em>site-level</em> mean carbon stock in <em>live trees</em> for each year that was sampled. Your estimate will be from the plots that are sampling the ecosystem under the flux tower - called “tower plots”. See <a href="https://www.neonscience.org/field-sites/field-sites-map/HARV" class="uri">https://www.neonscience.org/field-sites/field-sites-map/HARV</a> for an example map of a plot with the tower plots labeled.</p>
+<p>Hints for calculating carbon in live trees:</p>
+<ul>
+<li>Remember that individual trees are within plots that have a set area.<br />
+Individual trees and plots are remeasured through time.</li>
+<li>The <code>plantStatus</code> column has whether the tree was live at the time of measurement, but there are multiple types of live trees. Be sure your analysis includes all the types of live trees. You may need to use string manipulation and filter functions in the <code>stringr</code> package.</li>
+<li>Remember that only 50% of biomass is carbon so you will need to convert from biomass to carbon</li>
+<li>Assume that belowground biomass (i.e., roots) is 30% of aboveground biomass</li>
+<li>Be very careful with the units at each step: the final units should be kgC m^-2 (Kilogram of carbon per meter squared). The order of magnitude should be 1 - 100.<br />
+</li>
+<li>The information that you need is found across multiple tables. Joining tables can be tricky because the plot table has repeating plotIDs, resulting in duplicated values when you join. The function <code>distinct(plotID, .keep_all = TRUE)</code> can be used to select each plotID only once.</li>
+<li>The Climate Action Reserve project (an official carbon accounting organization for the California Carbon Exchange) provides allometric relationships to use. The allometric equations for each species can be found in the file “Allometrics.csv” on modules. Places this file in you <code>data_raw</code> directory. You will need to join the parameters in “Allometrics.csv” to your data frame with the diameter measurements. If a species is not in the list of allometric relationships it should have an NA when you join, just pick one set of allometric parameters to to use and assign it to all species with NAs (these are very uncommon species to it won’t influence your answer much). The parameters we use come from Table 4 in the Jenkins et al. 2003 paper on Canvas.</li>
+<li>The equation for coverting diameter to biomass is at the bottom of Table 4 in Jenkins et al. 2003. The equation uses B0 and B1 from “Allometrics.csv”.</li>
+<li>The site level value is the average across plots. Don’t forget that we are only interested in the “Tower” plots.</li>
+<li>Remember that each plot represents an area of forest where all the trees are measured.<br />
+</li>
+<li>All values of carbon stocks should be in kg C per m2. You final vegetation stock numbers for the site should be an average across all ‘tower’ plots.</li>
+</ul>
+<p>Remember to review the description in <strong>Background on estimating carbon stocks</strong> about how to calculate carbon stocks.</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
 </div>
-<div id="step-6-analyzing-a-new-state" class="section level2">
-<h2>Step 6: Analyzing a new state</h2>
-<p><strong>Question 3</strong> Answer the following question by reusing and modifying the code above: What was the probability of exceeding the EPA threshold for all gauges in Virginia between 2014-04-01 and 2014-09-01?</p>
-<p>You will get the list of Virginia gauges by 1) Going to <a href="https://waterwatch.usgs.gov/" class="uri">https://waterwatch.usgs.gov/</a> 2) Selecting Virginia and Nitrate from the drop-down options 3) Clicking “Site List”</p>
-<p>The numbers in front of each station are the numbers used in the API. Be sure your answer prints out to the document when you knit it.</p>
-<p><strong>Answer 3:</strong></p>
-<pre class="r"><code>#INSERT CODE
-print(site_exceed)</code></pre>
-<p><strong>Question 4:</strong> How does the probability of exceeding the EPA threshold differ between Iowa and Virginia? How might this be related to differences in land-use between the states?</p>
-<p><strong>Answer 4:</strong></p>
-</div>
-<div id="step-7-optional---not-graded-analyzing-multiple-time-periods" class="section level2">
-<h2>Step 7 (Optional - Not graded): Analyzing multiple time periods</h2>
-<p><strong>Optional Question 5:</strong></p>
-<p>Answer the following question by reusing and modifying the code above: What was the probability of exceeding the EPA threshold for station “05412500” in Iowa each year between April 1 and Sept 1 for years 2014 though 2018? (you will calculate the probability of exceeding separately for each year). What do you need to modify to evaluate different years rather than sites? Think about how the example above uses the <code>site</code> vector and modify the code so that it loops through different time periods.</p>
-<p>Be sure your answer prints out to the document when you knit it.</p>
-<p><strong>Optional Answer 5:</strong></p>
-<pre class="r"><code>#INSERT CODE
-
-print(site_exceed)</code></pre>
-<p><strong>Optional Question 6:</strong></p>
-<p>Is the probability of exceeding the EPA threshold changing over time? Show with a plot.</p>
-<p><strong>Optional Answer 6:</strong></p>
-<pre class="r"><code>ggplot(data = site_exceed_combined, mapping = aes(x = years, y = exceed)) +
-  geom_line() +
-  geom_point() +
-  labs(x = &quot;Year&quot;, y = &quot;Proability of Exceeding EPA Threshold&quot;, 
-       title = &quot;Iowa: Proabability of nitrate exceeding EPA threshold&quot;)</code></pre>
-</div>
-<div id="reference" class="section level2">
-<h2>Reference</h2>
-<p>This module was initially developed by</p>
-<p>Castendyk, D. and Gibson, C. 30 June 2015. Project EDDIE: Water Quality. Project EDDIE Module 6, Version 1. <a href="http://cemast.illinoisstate.edu/data-for-students/modules/water-quality.shtml" class="uri">http://cemast.illinoisstate.edu/data-for-students/modules/water-quality.shtml</a>. Module development was supported by NSF DEB 1245707.</p>
+<div id="part-6-create-report" class="section level2">
+<h2>Part 6: Create report</h2>
+<p>I am looking the following plots, tables, and text in the Rmarkdown document:</p>
+<ul>
+<li>A figure showing the average live tree carbon stocks in each site and year</li>
+</ul>
+<pre class="r"><code>#INSERT CODE</code></pre>
+<ul>
+<li>Summarized table of values for the site level carbon stocks averaged across year (use the <code>kable()</code> function to generate a clean looking table).</li>
+</ul>
+<pre class="r"><code>#INSERT CODE</code></pre>
+<ul>
+<li><p>Text describing issues that you had with your analysis, concerns you have with your analysis, concerns you have with the data</p></li>
+<li><p>Text describing whether your data analysis supported your hypothesis from Part #1 and, if not, possible reasons why it did not.</p></li>
+</ul>
+<p>Be sure your figures are complete with units, labels, and a title. Be sure your figures are legible when knitted.</p>
 </div>
 
 
@@ -746,6 +573,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

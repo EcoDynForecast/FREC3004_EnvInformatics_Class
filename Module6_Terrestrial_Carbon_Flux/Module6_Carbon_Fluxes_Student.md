@@ -62,7 +62,7 @@ Having completed the module students will be able to:
   - geom\_hline()
   - joins
 
-## R knowlege covered in module
+## R knowledge covered in module
 
   - str\_sub()
   - add\_predictions()
@@ -178,15 +178,15 @@ Step 1: Download carbon flux data for your site.
 3)  Sign in to the site
 4)  Click “Data” tab and chose the “FLUXNET2015 Dataset”
 5)  Click “Download FLUXNET2015 Dataset”
-6)  Chose “Tier 1 Data”
+6)  Chose “CC-BY-4.0 Data”
 7)  Click “FULLSET data product (includes SUBSET)”
 8)  In the list of Site IDs, chose your Site and move to the “Your
     Selections”
 9)  Chose “Education” for the “Intended Use”
 10) In the description, write “For analysis in Virginia Tech FREC 3004
     Environmental Informatics course”
-11) Open the data policy and summarize how it applies to use in this
-    course
+11) Open the data policy (see link below box) and summarize how it
+    applies to use in this course
 
 **Question 5:** How are we meeting the data policy requirements?
 
@@ -195,12 +195,12 @@ Step 1: Download carbon flux data for your site.
 12) If we are meeting the data policy requirements, click “I
     acknowledge..”
 13) Click “Download All Files”
-14) Click on the link with your Site ID
+14) Click on the link with your Site ID (next to README)
 15) Move the files to your module data subfolder
 
 Step 2: Import the hourly time-step data (i.e., file with
-“FLUXNET2015\_FULLSET\_HH”). Orient and familiarize yourself with the
-variable headers:
+“FLUXNET2015\_FULLSET\_HH” or “FLUXNET2015\_FULLSET\_HR”). Orient and
+familiarize yourself with the variable headers:
 <http://fluxnet.fluxdata.org/data/fluxnet2015-dataset/fullset-data-product/>.
 
 ``` r
@@ -272,6 +272,10 @@ positive or negative.
 #INSERT CODE
 ```
 
+**Question 6: ** Why is the plot with the hourly data hard to interpret?
+
+**Answer 6: **
+
 Plot the time-series for NEP at annual scale (calculate the annual
 mean). Be sure to add a horizontal line at 0 so that it is easy to see
 when NEP is positive or negative.
@@ -280,17 +284,17 @@ when NEP is positive or negative.
 #INSERT CODE
 ```
 
-Plot the time series for NEP at the monthly scale. Be sure to add a
-horizontal line at 0 so that it is easy to see when NEP is positive or
-negative.
+Plot the time series for NEP at the monthly scale (calculate the mean
+for each month of the year). Be sure to add a horizontal line at 0 so
+that it is easy to see when NEP is positive or negative.
 
 ``` r
 #INSERT CODE
 ```
 
-Plot the time series for NEP at the hourly scale. Be sure to add a
-horizontal line at 0 so that it is easy to see when NEP is positive or
-negative.
+Plot the time series for NEP at the hourly scale (calculate the mean for
+each hour of the day). Be sure to add a horizontal line at 0 so that it
+is easy to see when NEP is positive or negative.
 
 ``` r
 #INSERT CODE
@@ -298,17 +302,17 @@ negative.
 
 Step 5: Were your hypotheses for NEP generally supported?
 
-**Question 6:** Hourly within a day
-
-**Answer 6:**
-
-**Question 7:** Monthly to month
+**Question 7:** Hourly within a day
 
 **Answer 7:**
 
-**Question 8:** Year to year
+**Question 8:** Monthly within a year
 
 **Answer 8:**
+
+**Question 9:** Year to year
+
+**Answer 9:**
 
 ## Part 3: Modeling the loss of carbon through respiration (RE)
 
@@ -319,14 +323,15 @@ zero at night.
 
 Step 1: Hypothesize how you expect air temperature to influence RE.
 
-**Question 9:** Give your hypothesis for how RE varies with temperature.
+**Question 10:** Give your hypothesis for how RE varies with
+temperature.
 
-**Answer 9:**
+**Answer 10:**
 
 Step 2: Examine the relationship between NEP and temperature (`TA_F`) at
 night by using the NIGHT variable to select only the data that are
-identified as occuring at NIGHT (see NIGHT column in the data) and
-ploting TA\_F on the x-axis and NEP on the y-axis
+identified as occurring at NIGHT (see NIGHT column in the data) and
+plotting TA\_F on the x-axis and NEP on the y-axis
 
 ``` r
 #INSERT CODE
@@ -348,7 +353,7 @@ use the nls() function to find the model.
 We can use the model object to make predictions and calculate residuals.
 The `add_predictions` function takes the coefficients (or parameters)
 from the model and creates predictions for each row. It creates a new
-variable called `pred`. Similarly, `add_residuals()` calcuates the
+variable called `pred`. Similarly, `add_residuals()` calculates the
 difference between the observed data and the model (similar to Module
 3).
 
@@ -359,32 +364,33 @@ night_only <- night_only %>%
 ```
 
 Examine our model by adding the predicted nighttime NEP to the plot with
-the data as a colored line. This will use geom\_points for ploting the
-data and geom\_line for plotting the results from the model. Be sure to
-look at the column name for the predictions from the model.
+the data as a colored line. This will use geom\_points for plotting the
+data and geom\_line for plotting the predictions from the model. Be sure
+to look at the column names to get the created column that contain the
+predictions from the model.
 
 ``` r
 #INSERT CODE
 ```
 
-**Question 10:** Was your hypothesis for how RE varies with temperature
+**Question 11:** Was your hypothesis for how RE varies with temperature
 supported by the data?
 
-**Answer 10:**
+**Answer 11:**
 
 Examine the residuals of the predicted NEP using a plot in the same way
 that we examined residuals in Module 3.
 
-**Question 11:** Show the plot. Are they normally distributed around 0?
+**Question 12:** Show the plot. Are they normally distributed around 0?
 
-**Answer 11:**
+**Answer 12:**
 
 ``` r
 #INSERT CODE
 ```
 
 Step 4: We can use this relationship between air temperature and NEP at
-night to calculate RE as a fuction of air temperature throughout the
+night to calculate RE as a function of air temperature throughout the
 day. First, create a function to calculate RE at all time periods in the
 full data set.  
 Being able to make you own functions is a powerful way to develop code
@@ -393,7 +399,7 @@ that adds two number together.
 
 ``` r
 sum_two_numbers <- function(a, b){
-  c = a + b
+  c <- a + b
   return(c)
 }
 ```
@@ -428,29 +434,29 @@ you are using the function without a pipe you need to use the command
 with a pipe then you can skip the df augument and use `calculate_Re(m =
 m)`
 
-Now apply the function to all the flux data (do not rerun the nls
-function - you need the nls function output from only the nighttime data
-because that is how RE is calcuated). Remember that piping means that
-you do not need to include the `df` when using the function.
+Now apply the function to all the flux data (not the night only data).
+Do not rerun the nls function - you need the nls function output (m)
+from only the nighttime data because that is used to calcuate RE for all
+the hours in the full data set.
 
 ``` r
 #INSERT CODE
 ```
 
-Plot RE at the monthly time scale.
+Plot RE at the monthly time scale (mean of each month within the year).
 
 ``` r
 #INSERT CODE
 ```
 
-**Question 12:** Do the patterns of RE at the monthly time-scale match
+**Question 13:** Do the patterns of RE at the monthly time-scale match
 your expectations from Question 3?
 
-**Answer 12:**
+**Answer 13:**
 
 ## Part 4: Modeling the gain of carbon through respiration (GPP)
 
-Now that we have an estimate to for RE during the date we can use the
+Now that we have an estimate to for RE during the day we can use the
 fact that NEP = GPP - RE (assuming, as we have done in our
 calculate\_Re() function, that RE is a positive number if carbon is lost
 from the ecosystem) to estimate GPP for each time period.
@@ -459,22 +465,24 @@ from the ecosystem) to estimate GPP for each time period.
 #INSERT CODE
 ```
 
-Plot GPP at the hourly time scale.
+Plot GPP at the hourly time scale (mean of each hour within the day)
 
 ``` r
 #INSERT CODE
 ```
 
-**Question 13:** Do the GPP patterns at the hourly time-scale match your
+**Question 14:** Do the GPP patterns at the hourly time-scale match your
 expectations from Question 2?
 
-**Answer 13:**
+**Answer 14:**
 
-Finally, create a plot with the **monthly** values of NEP, GPP, and RE
-on the same plot (x-axis in month and y-axis is the flux value). Do to
-this easily in ggplot I recommend using the `pivot_longer()` function to
-create a variable that is the type of flux (GPP, NEE, RE) and a column
-for the value
+**Question 15:** Create a plot with the **monthly** mean values of NEP,
+GPP, and RE on the same plot (x-axis in month and y-axis is the flux
+value). Do to this easily in ggplot I recommend using the
+`pivot_longer()` function to create a variable that is the type of flux
+(GPP, NEE, RE) and a column for the value
+
+**Answer 15:**
 
 ``` r
 #INSERT CODE
@@ -486,35 +494,33 @@ Pick a new site in a different eco-region and compare NEP values at the
 monthly and yearly scales. Hint: you will need to use a join by month to
 combine the monthly summarized data from the two sites.
 
-**Question 14:** What site did you chose?
-
-**Answer 14:**
-
-**Question 15:**
-
-Use a plot to show how monthly NEP dynamics differ between the two sites
-
-**Answer 15:**
-
-``` r
-#INSERT CODE
-```
-
-**Question 16:**
-
-Make a plot of the annual NEP vs. year with both sites on the same
-figure.
+**Question 16:** What site did you chose?
 
 **Answer 16:**
 
+**Question 17:** Use a plot to show how monthly mean NEP dynamics differ
+between the two sites. Plot the monthly mean NEP from the two sites on
+the same figure.
+
+**Answer 17:**
+
 ``` r
 #INSERT CODE
 ```
 
-**Question 17:** At the annual scale, which site removes more carbon
+**Question 18:** Make a plot of the annual NEP vs. year with both sites
+on the same figure.
+
+**Answer 18:**
+
+``` r
+#INSERT CODE
+```
+
+**Question 19:** At the annual scale, which site removes more carbon
 from the atmosphere?
 
-**Answer 17:**
+**Answer 19:**
 
 ## References
 

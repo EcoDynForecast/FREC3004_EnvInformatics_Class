@@ -109,10 +109,10 @@ These data are compiled by the Goddard Institute for Space Studies,
 NASA.  
 Visit <https://data.giss.nasa.gov/gistemp/> and download the file for
 ‘Global-mean monthly, seasonal, and annual means’. This may require
-right (or in on a Mac control-clicking) on the csv link and selecting
-‘Download linked File’.  
-Download the file to your project data directory. The file should be
-called `GLB.Ts.csv`.
+right clicking (or in on a Mac control-clicking) on the csv link and
+selecting ‘Download linked File’.  
+Move the downloaded file to your project data directory. The file should
+be called `GLB.Ts+dSST.csv`.
 
 Important: the units of temperature are Celsius but they are provided as
 an anomaly. An anomaly is the difference from a reference temperature.
@@ -376,7 +376,7 @@ down at the bottom of that page there is a link called “Historic
 isotopic temperature record from the Vostok Ice core, Antarctica”.
 Select this link, which provide information about the core location, and
 then select ‘Digital Data’ on the top of the page. Download the Vostok
-ice core data to your `data` directory
+ice core data to your `data_raw` directory
 
 **Import data**
 
@@ -536,8 +536,14 @@ Mauna Loa web site?
 **Transform and model**
 
 Now make a new graph focused only on a time period of rapid change in
-CO2. Determine the rate of change by fitting a trend line and looking at
-the slope.
+CO2.
+
+``` r
+#INSERT CODE
+```
+
+Determine the rate of change by fitting a trend line and looking at the
+slope.
 
 ``` r
 #INSERT CODE
@@ -550,10 +556,10 @@ equivalent).
 
 **Answer 10:**
 
-**Question 11:** How do current (i.e., in the past ~200 years) changes
-in atmospheric CO2 concentration and average global temperature compare
-to pre-historic (i.e., in the past hundreds of thousands of years)
-changes in these variables?
+**Question 11:** How do current (i.e., since 1950) changes in
+atmospheric CO2 concentration and average global temperature compare to
+pre-historic (i.e., in the past hundreds of thousands of years) changes
+in these variables?
 
 **Answer 11:**
 
@@ -562,7 +568,7 @@ temperature are due to natural or anthropogenic (human) factors?
 
 **Answer 12:**
 
-*Question 13:* It is plausible that recent increase in atmospheric
+**Question 13:** It is plausible that recent increase in atmospheric
 carbon dioxide is a result of natural fluctuations and not
 human-induced?
 

@@ -2,12 +2,12 @@
 title: "Module 5: Global Climate Change Module"
 author: "FREC 3004 Environmental Informatics"
 output:
-  github_document: default
   html_document: default
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
 ```
 ## Science question
 
@@ -110,10 +110,10 @@ Getting the air temperature data
 
 These data are compiled by the Goddard Institute for Space Studies, NASA.  
 Visit https://data.giss.nasa.gov/gistemp/ and download the file for 'Global-mean
-monthly, seasonal, and annual means'.  This may require right (or in on a Mac 
-control-clicking) on the csv link and selecting 'Download linked File'.  
-Download the file to your project data directory. The file should be 
-called `GLB.Ts.csv`.
+monthly, seasonal, and annual means'.  This may require right clicking (or in on
+a Mac control-clicking) on the csv link and selecting 'Download linked File'.  
+Move the downloaded file to your project data directory. The file should be 
+called `GLB.Ts+dSST.csv`.
 
 Important: the units of temperature are Celsius but they are provided as an 
 anomaly.  An anomaly is the difference from a reference temperature.  To 
@@ -192,9 +192,9 @@ Examine the summary of the fit below
 
 Many scientists claim that drastic changes in global temperature began around 
 1950 when fossil-fuel-powered transportation became a mainstay for most 
-families. Test this hypothesis by adjusting your trend line so that it only looks
-at the most recent decades, after personal transportation became common. You can
-do this by:
+families. Test this hypothesis by adjusting your trend line so that it only 
+looks at the most recent decades, after personal transportation became common. 
+You can do this by:
 
 * Create a dateset with data after 1950
 * Create a plot just as you did before for the post 1950 period and add the 
@@ -252,8 +252,8 @@ deviation.
 
 **Import data**
 
-This a trickier dataset to read in. Use the skills you have developed in the last
-two modules to read the file in.  
+This a trickier dataset to read in. Use the skills you have developed in the 
+last two modules to read the file in.  
 
 ```{r}
 #INSERT CODE
@@ -371,14 +371,14 @@ menu, select Climate. Then select Temperature. Then down at the bottom of that
 page there is a link called “Historic isotopic temperature record from the 
 Vostok Ice core, Antarctica”. Select this link, which provide information about 
 the core location, and then select ‘Digital Data’ on the top of the page. 
-Download the Vostok ice core data to your `data` directory
+Download the Vostok ice core data to your `data_raw` directory
 
 **Import data**
 
-This a trickier dataset to read in. I recommend opening the file in a text editor
-and looking at how many lines are present before the first data line and at the 
-deliminator that separates values in a line.  Also, you may need to rename some 
-of the columns if you are having trouble importing the header row.
+This a trickier dataset to read in. I recommend opening the file in a text 
+editor and looking at how many lines are present before the first data line and 
+at the deliminator that separates values in a line.  Also, you may need to 
+rename some of the columns if you are having trouble importing the header row.
 
 ```{r}
 #INSERT CODE
@@ -446,8 +446,8 @@ Add a trend line to the ice core temperature data and look at the R2 value.
 #INSERT CODE
 ```
 
-**Question 6:** Do you think this line is a good representation of long-term rates of 
-temperature change? 
+**Question 6:** Do you think this line is a good representation of long-term 
+rates of temperature change? 
 
 **Answer 6:**
 
@@ -458,8 +458,8 @@ rapidly. Make note of the x-axis values at the beginning and end of the time
 period segments that you think have the steepest slopes.  Remember a rate of 
 change is the temperature change divided by the time change   
 
-[Challenge (not graded): Rather than visually selecting a period, write code to 
-find which period in the data is the steepest] 
+[Advance options for solving Question 7: Rather than visually selecting a 
+period, write code to find which period in the data is the steepest] 
 
 Using your visual selection or you selection from the challenge, use the x-axis 
 values that represent the steepest period to filter the dataset to only be your 
@@ -486,7 +486,8 @@ at the slope.
 #INSERT CODE
 ```
 
-**Question 7:** What is this rate of pre-historic temperature change (with units)?
+**Question 7:** What is this rate of pre-historic temperature change 
+(with units)?
 
 **Answer 7:**
 
@@ -529,31 +530,38 @@ site?
 **Transform and model**
 
 Now make a new graph focused only on a time period of rapid change in CO2. 
-Determine the rate of change by fitting a trend line and looking at the slope. 
+ 
 
 ```{r}
 #INSERT CODE
 ```
 
-**Question 10:** Compare the fastest natural rate of change in CO2 from the ice-core with the 
-modern rate of change from the Mauna Loa data that you analyzed earlier in the 
-module. (Remember to check your units are equivalent).
+Determine the rate of change by fitting a trend line and looking at the slope.
+
+```{r}
+#INSERT CODE
+```
+
+**Question 10:** Compare the fastest natural rate of change in CO2 from the 
+ice-core with the modern rate of change from the Mauna Loa data that you 
+analyzed earlier in the module. (Remember to check your units are equivalent).
 
 **Answer 10:** 
 
-**Question 11:** How do current (i.e., in the past ~200 years) changes in atmospheric CO2 
-concentration and average global temperature compare to pre-historic (i.e., in 
-the past hundreds of thousands of years) changes in these variables?
+**Question 11:** How do current (i.e., since 1950) changes in 
+atmospheric CO2 concentration and average global temperature compare to 
+pre-historic (i.e., in the past hundreds of thousands of years) changes in these
+variables?
 
 **Answer 11:**
 
-**Question 12:** What does this suggest about whether recent changes in temperature are due to
-natural or anthropogenic (human) factors? 
+**Question 12:** What does this suggest about whether recent changes in 
+temperature are due to natural or anthropogenic (human) factors? 
 
 **Answer 12:**
 
-*Question 13:* It is plausible that recent increase in atmospheric carbon dioxide is a 
-result of natural fluctuations and not human-induced?
+**Question 13:** It is plausible that recent increase in atmospheric carbon 
+dioxide is a result of natural fluctuations and not human-induced?
 
 **Answer 13:**
 

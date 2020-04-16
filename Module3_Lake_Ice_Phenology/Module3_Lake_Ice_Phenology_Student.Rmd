@@ -3,11 +3,11 @@ title: "Module 3: Lake Ice Phenology"
 author: 'FREC 3004: Environmental Informatics'
 output:
   html_document: default
-  word_document: default
+  github_document: default
 ---
 
 ```{r setup, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 ## Science question
 
