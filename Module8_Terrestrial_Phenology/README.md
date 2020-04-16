@@ -20,7 +20,7 @@ How is the timing of spring-leaf out changing over time?
 * Analyze a phenology time-series and assess if leaf-on, leaf-off, and growing 
   season length are changing.
   
-# Data Science Learning objectives
+## Data Science Learning objectives
 
 * Practice working with vectors, matices, and arrays.
 * Extract relevant information from a 3 dimensional data-set
