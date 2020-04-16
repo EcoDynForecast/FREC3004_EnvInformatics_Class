@@ -10,9 +10,9 @@ I teach using live coding and give students time to work through the challenge q
 
 I do not teach the R and SQL sub-module
 
-I am working on additional challenge questions using a different data set that provides homework quizzes that student do between each class period.  
+The students are required to do online quizes via our LMS (Canvas) between each class. They have two chances to take the quiz and I record the highest grade.  There are about 5 questions per quiz and the answers are automatically graded on Canvas.
 
-Future classes may include training in joins, for-loops, and if-else statements
+Later modules in the class teach provide training in joins, for-loops, and if-else statements
 
 # Class Pacing
 
@@ -35,8 +35,6 @@ Class period 6 (1 hr 15 minutes)
 	  the third challenge question of visualization (the one right before time series)
 Class period 7 (1 hr 15 minutes)
 	- Visualization time series through the end of Visualization.
-
-
 
 # Data
 Data is from the paper S. K. Morgan Ernest, Thomas J. Valone, and James H. Brown. 2009. Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA. Ecology 90:1708.
