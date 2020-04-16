@@ -4,7 +4,7 @@
 
 ### Option 1: Students only analyze live vegetation carbon stocks
 
-3 - 1 hr 15 min class periods
+Three 1 hour 15 minute class periods
 
 ### Option 2: Students only analyze live vegetation, dead vegetation and soil carbon stocks
 
