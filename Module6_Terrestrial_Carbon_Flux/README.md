@@ -1,6 +1,6 @@
 # Module 5: Terrestrial Carbon Flux
 
-3 - 1 hr 15 minute class periods
+Three 1 hour 15 minute class periods
 
 ## Focal data set
 
