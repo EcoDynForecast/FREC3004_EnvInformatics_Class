@@ -4,11 +4,7 @@ Course Syllabus
 
 TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
 
-PLACE: 219 War Memorial Gym
-
-INSTRUCTOR:    
-
-Dr. R. Quinn Thomas
+INSTRUCTOR:    Dr. R. Quinn Thomas
 
 # TEXT: 
  
