@@ -2,9 +2,9 @@
 
 Course Syllabus
 
-TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
+Time:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
 
-INSTRUCTOR:    Dr. R. Quinn Thomas
+Instructor:    Dr. R. Quinn Thomas
 
 # TEXT 
  
