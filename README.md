@@ -2,9 +2,9 @@
 
 Course Syllabus
 
-TIME:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
+Time:  Lecture – 2:00 - 3:15 PM; Tuesdays and Thursdays
 
-INSTRUCTOR:    Dr. R. Quinn Thomas
+Instructor:    Dr. R. Quinn Thomas
 
 # TEXT 
  
@@ -62,12 +62,9 @@ While there are no specific prerequisites for the class, this class requires com
 *	Group vs. individual work.  Each assignment will specify whether it is group or individual work.  
 
 *	The Undergraduate Honor Code pledge that each member of the university community agrees to abide by states:
-
-** “As a Hokie, I will conduct myself with honor and integrity at all times. I will  not lie, cheat, or steal, nor will I accept the actions of those who do.”
-
-** Students enrolled in this course are responsible for abiding by the Honor Code. A student who has doubts about how the Honor Code applies to any assignment is responsible for obtaining specific guidance from the course instructor before submitting the assignment for evaluation. Ignorance of the rules does not exclude any member of the University community from the requirements and expectations of the Honor Code.
-
-** For additional information about the Honor Code, please visit: https://www.honorsystem.vt.edu/
+     * “As a Hokie, I will conduct myself with honor and integrity at all times. I will  not lie, cheat, or steal, nor will I accept the actions of those who do.”
+     * Students enrolled in this course are responsible for abiding by the Honor Code. A student who has doubts about how the Honor Code applies to any assignment is responsible for obtaining specific guidance from the course instructor before submitting the assignment for evaluation. Ignorance of the rules does not exclude any member of the University community from the requirements and expectations of the Honor Code.
+     * For additional information about the Honor Code, please visit: https://www.honorsystem.vt.edu/
 
 *	Your attendance at lecture is expected, and you are expected to be at class on time. Each class may include an in-class activity that requires your attendance to receive credit.
 
