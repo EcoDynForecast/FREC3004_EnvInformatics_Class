@@ -2,7 +2,9 @@
 title: "Joins"
 author: 'FREC 3004: Environmental Informatics'
 date: "3/20/2020"
-output: html_document
+output:   
+  github_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
