@@ -69,3 +69,11 @@ Having completed the module students will be able to:
 * make_datetime()
 * creating simple functions
 
+## Reference
+
+Components of the module are from:
+
+Gough, C. M., Giffen, C., Woodward, T. W. (2018). Environmental Drivers
+of Ecosystem Carbon Fluxes from Minutes to Years. NEON Faculty Mentoring
+Network, QUBES Educational Resources. <doi:10.25334/Q4VD7W>
+

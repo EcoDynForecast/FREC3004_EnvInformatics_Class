@@ -75,3 +75,10 @@ it stored?
 ## R knowledge covered in module
 
 * NEON specific functions (stackByTable())
+
+## Reference
+
+This module was developed as part of the NEON-QUBES Faculty Mentoring Network Spring 2019
+by R. Q. Thomas
+
+

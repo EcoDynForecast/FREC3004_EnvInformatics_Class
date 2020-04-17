@@ -31,4 +31,4 @@ Pending
 
 ## R knowlege covered in module
 
-Pending
+This module was originally developed by Benjamin J Ahlswede in Spring 2019

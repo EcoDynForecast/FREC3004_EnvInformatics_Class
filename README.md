@@ -9,6 +9,7 @@ INSTRUCTOR:    Dr. R. Quinn Thomas
 # TEXT 
  
 Wickham, Hadley and Garrett Grolemund.  2017. R for Data Science.  O’Reilly Press
+*	Available for free online: https://r4ds.had.co.nz
 
 Other readings available on Canvas in the Files/Readings folder
 
@@ -16,6 +17,7 @@ Other readings available on Canvas in the Files/Readings folder
 
 Sophomore standing required. Foundational knowledge in quantitative and computational thinking expected.
 
+While there are no specific prerequisites for the class, this class requires computer programing from the first class period. The course does provides multi-week training in the R programming language.  However, students must commit to learning and applying computer programming.  If you are concerned whether you are prepared for the course, please see me after the first day of class to discuss. 
 
 # LEARNING OBJECTIVES
 
@@ -37,6 +39,18 @@ Sophomore standing required. Foundational knowledge in quantitative and computat
 
 *	Module assignments (60%): Most of class time will be focused on analyzing different environmental dataset.  Each module will help develop different environmental informatics skills.  Each student will submit a written assignment associated with each module.  
 
+
+| Module	| Title	 | Environmental Focus|
+|-----------|--------|--------------------|
+|1	|Climate Change and Lakes|	How does climate change alter lake temperature?|
+|2	|Data Analysis and Visualization in R|	Animal populations|
+|3	|Lake Ice Phenology|	How is global ice cover in lake changing?|
+|4	|Water Quality|	Where are rivers in the U.S. exceeding legal nutrient levels?|
+|5	|Global Climate Change|	How are global temperatures changing and what is causing it?|
+|6	|Terrestrial carbon flux|	How much carbon dioxide does a forest remove from the atmosphere?|
+|7	|Terrestrial Carbon Stocks|	How much carbon is stored in a forest ecosystems and where in the ecosystem is it stored?|
+|	|Ethics and Environmental Informatics|	What are important ethical issues associated with environmental data?|
+
 *	Exams (40%):  The in-class exams assess the student’s capacity to apply previously learned techniques to a new environmental dataset.  There will be two exams through the semester.
 
 # COURSE POLICIES:
@@ -49,11 +63,11 @@ Sophomore standing required. Foundational knowledge in quantitative and computat
 
 *	The Undergraduate Honor Code pledge that each member of the university community agrees to abide by states:
 
- “As a Hokie, I will conduct myself with honor and integrity at all times. I will  not lie, cheat, or steal, nor will I accept the actions of those who do.”
+** “As a Hokie, I will conduct myself with honor and integrity at all times. I will  not lie, cheat, or steal, nor will I accept the actions of those who do.”
 
-Students enrolled in this course are responsible for abiding by the Honor Code. A student who has doubts about how the Honor Code applies to any assignment is responsible for obtaining specific guidance from the course instructor before submitting the assignment for evaluation. Ignorance of the rules does not exclude any member of the University community from the requirements and expectations of the Honor Code.
+** Students enrolled in this course are responsible for abiding by the Honor Code. A student who has doubts about how the Honor Code applies to any assignment is responsible for obtaining specific guidance from the course instructor before submitting the assignment for evaluation. Ignorance of the rules does not exclude any member of the University community from the requirements and expectations of the Honor Code.
 
-For additional information about the Honor Code, please visit: https://www.honorsystem.vt.edu/
+** For additional information about the Honor Code, please visit: https://www.honorsystem.vt.edu/
 
 *	Your attendance at lecture is expected, and you are expected to be at class on time. Each class may include an in-class activity that requires your attendance to receive credit.
 

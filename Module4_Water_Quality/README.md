@@ -64,3 +64,12 @@ How often do rivers in the U.S. exceed the EPA limit for water quality?
 * ifelse()
 * vector()
 * geom_hline()
+
+## Reference
+
+This module was initially developed by
+
+Castendyk, D. and Gibson, C. 30 June 2015. Project EDDIE: Water Quality.
+Project EDDIE Module 6, Version 1.
+<http://cemast.illinoisstate.edu/data-for-students/modules/water-quality.shtml>.
+Module development was supported by NSF DEB 1245707.

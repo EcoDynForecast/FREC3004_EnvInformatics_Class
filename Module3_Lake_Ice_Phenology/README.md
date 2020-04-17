@@ -49,3 +49,11 @@ Are lakes losing ice earlier in the year?
 * geom_smooth()
 * geom_histogram()
 * confint()
+
+## References
+
+This module was initially developed as a Excel-based activity by Carey,
+C.C., J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake
+Ice Phenology. Project EDDIE Module 1, Version 1:
+<http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>.
+Module development was supported by NSF DEB 1245707.
