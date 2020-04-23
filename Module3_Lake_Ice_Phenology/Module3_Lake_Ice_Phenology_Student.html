@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="FREC 3004: Environmental Informatics" />
@@ -255,9 +255,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -271,7 +269,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -288,8 +285,6 @@ summary {
 </style>
 
 
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
 
@@ -335,6 +330,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -347,20 +343,17 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -370,7 +363,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Module 3: Lake Ice Phenology</h1>
-<h4 class="author"><em>FREC 3004: Environmental Informatics</em></h4>
+<h4 class="author">FREC 3004: Environmental Informatics</h4>
 
 </div>
 
@@ -398,18 +391,37 @@ $(document).ready(function () {
 </ul>
 <div id="assumed-r-knowledge" class="section level2">
 <h2>Assumed R knowledge</h2>
-<p>mutate() group_by() ggplot() geom_line() geom_point() select() summarize() mean() filter() rename() read_csv() head()</p>
+<ul>
+<li>mutate()</li>
+<li>group_by()</li>
+<li>ggplot()</li>
+<li>geom_line()</li>
+<li>geom_point()</li>
+<li>select()</li>
+<li>summarize()</li>
+<li>mean()</li>
+<li>filter()</li>
+<li>rename()</li>
+<li>read_csv()</li>
+<li>head()</li>
+</ul>
 </div>
-<div id="r-knowlege-covered-in-module" class="section level2">
-<h2>R knowlege covered in module</h2>
-<p>lm() rbind() geom_abline() geom_smooth() geom_histogram() confint()</p>
+<div id="r-knowledge-covered-in-module" class="section level2">
+<h2>R knowledge covered in module</h2>
+<ul>
+<li>lm()</li>
+<li>rbind()</li>
+<li>geom_abline()</li>
+<li>geom_smooth()</li>
+<li>geom_histogram()</li>
+</ul>
 </div>
 <div id="why-this-matters" class="section level2">
 <h2>Why this matters</h2>
 <p>Lakes are changing worldwide due to altered climate. Many lakes that were historically frozen in the winter are now experiencing fewer days of ice cover and earlier ice-off dates (or not even freezing at all). In this module, you will explore long-term ice-off datasets from several lakes and use linear regression to make predictions about ice-off dates in the future.</p>
 </div>
-<div id="initate-project" class="section level2">
-<h2>Initate project</h2>
+<div id="imitate-project" class="section level2">
+<h2>Imitate project</h2>
 <p>First, create a directory structure for this module (i.e., project).</p>
 <ul>
 <li>Create a folder called <code>FREC3004_Module3_IcePheno</code></li>
@@ -430,7 +442,7 @@ library(tidyverse)</code></pre>
 <h2>Import</h2>
 <p>Download the data file (“lake_ice_phenology_all_lakes.csv”) from Canvas (by clicking in Canvas, don’t use the download.file function) and move it into your <code>project_directory/data_raw</code> directory. Then use the function <code>read_csv</code> to import the comma delimited file into R. Name the imported data <code>ice_data</code>.</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
-<p>Now look at a preview of the data by just typing the data name (<code>ice_data</code>). The ‘doy’ in <code>ice_off_doy</code> stands for ‘day of year’ and is the day within the year where ice off occured.</p>
+<p>Now look at a preview of the data by just typing the data name (<code>ice_data</code>). The ‘doy’ in <code>ice_off_doy</code> stands for ‘day of year’ and is the day within the year where ice off occurred.</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
 <p>There should be 3 columns and 2,560 rows.</p>
 </div>
@@ -442,13 +454,13 @@ library(tidyverse)</code></pre>
 </div>
 <div id="visualize-the-data" class="section level2">
 <h2>Visualize the data</h2>
-<p>To visualize the data from Lake Sunapee, create an x-y plot with the year (<code>year</code>) on the x-axis and the day of year (<code>ice_off_doy</code>) on the y-axis. Plot the points (<code>geom_point</code>) and connectthe points with lines (<code>geom_line</code>).<br />
+<p>To visualize the data from Lake Sunapee, create an x-y plot with the year (<code>year</code>) on the x-axis and the day of year (<code>ice_off_doy</code>) on the y-axis. Plot the points (<code>geom_point</code>) and connect the points with lines (<code>geom_line</code>).<br />
 Be sure that the title, x-axis and y-axis labels are clearly labeled.</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
 </div>
 <div id="model-and-visualize-the-data" class="section level2">
 <h2>Model and visualize the data</h2>
-<p>We want to model how the ice-off date is changing through time. Our approach in this module is to use a simple linear regression. The <code>lm</code> function will estimate the parameters of the y = mx + b linear regression. Use the <code>lm</code> function to to predict ice_off_doy as a function (~) of the year for the data.frame called <code>sunapee</code>. Create an objectve called <code>fit</code> that contains results of the linear model.</p>
+<p>We want to model how the ice-off date is changing through time. Our approach in this module is to use a simple linear regression. The <code>lm</code> function will estimate the parameters of the y = mx + b linear regression. Use the <code>lm</code> function to to predict ice_off_doy as a function (~) of the year for the data.frame called <code>sunapee</code>. Create an object called <code>fit</code> that contains results of the linear model.</p>
 <pre class="r"><code>fit &lt;- lm(ice_off_doy ~ year, data = sunapee)</code></pre>
 <p>Then use the function <code>summary</code> to explore the result of the lm function</p>
 <pre class="r"><code>summary(fit)</code></pre>
@@ -458,13 +470,16 @@ fit$coefficients[2]</code></pre>
 <p>Second, It is important that the residuals from our linear model are normally distributed similar to the shape of the following:</p>
 <pre class="r"><code>ggplot(data = tibble(value = rnorm(1000, 0, 1))) +
   geom_histogram(aes(x = value),bins = 20)</code></pre>
-<p>We will use a histogram to visually assess whether this requirement is met. First, you will need to calculate the residuals. The residuals are the difference between the ice-off DOY that your linear regression predicts and the observed DOY in each year.<br />
-- Residuals that do not average to zero indicate that your linear regression is biased. - Residuals that have are large indicate that youre linear regression is not very useful for prediction.</p>
+<p>We will use a histogram to visually assess whether this requirement is met. First, you will need to calculate the residuals. The residuals are the difference between the ice-off DOY that your linear regression predicts and the observed DOY in each year.</p>
+<ul>
+<li>Residuals that do not average to zero indicate that your linear regression is biased.</li>
+<li>Residuals that have are large indicate that your linear regression is not very useful for prediction.</li>
+</ul>
 <p>You will use a histogram to examine the residuals. First, the code uses the coefficients to predict the ice-off DOY at each year. Second, calculate the residuals by subtracting the predicted ice-off DOY from the observed DOY.</p>
 <pre class="r"><code>sunapee &lt;- sunapee %&gt;% 
   mutate(predicted = fit$coefficients[1] + year * fit$coefficients[2], 
          residual = ice_off_doy - predicted) #Observed - Predicted</code></pre>
-<p>Now to visualize the residuals use <code>geom_histogram</code> to plot them as a histogram. I recommend using a binwidth of 5 in the histogram.</p>
+<p>Now to visualize the residuals use <code>geom_histogram</code> to plot them as a histogram. I recommend using a bin width of 5 in the histogram.</p>
 <pre class="r"><code>ggplot(data = sunapee) +
   geom_histogram(aes(x = residual), binwidth = 5) +
   labs(x = &quot;residuals (DOY)&quot;, y = &quot;Count&quot;, title = &quot;Histogram of residuals&quot;)</code></pre>
@@ -474,14 +489,14 @@ fit$coefficients[2]</code></pre>
 <p>Now use the regression line to predict the ice-off day of year in 2020. First, use the regression coefficients with the year 2020 to calculate the ice-off day using the linear relationship (y = b + mx)</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
 </div>
-<div id="transform-model-and-visualze-the-data" class="section level2">
-<h2>Transform, model, and visualze the data</h2>
+<div id="transform-model-and-visualize-the-data" class="section level2">
+<h2>Transform, model, and visualize the data</h2>
 <p>Create two regression lines that represent a breakpoint in 1970 for the regression.</p>
 <p>First, create a pre 1970 dataset (before 1970): You will use the <code>filter</code> function. Use the mutate function to add a new column named <code>period</code> and fill it with the string “pre_1970”</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
 <p>Second, create a post 1970 dataset (1970 and sooner): You will use the <code>filter</code> function. Use the mutate function to add a new column named <code>period</code> and fill it with the string “post_1970”</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
-<p>Third, calculate a regression sepearately for the two time periods.</p>
+<p>Third, calculate a regression separately for the two time periods.</p>
 <pre class="r"><code>#INSERT CODE</code></pre>
 <p>Fourth, examine the linear regressions. How do the coefficients and R2 differ between the two time periods?</p>
 <p>Period 1:</p>
@@ -524,7 +539,7 @@ ggsave(&quot;fig/plot.pdf&quot;, width = 7, height = 5)</code></pre>
 <p><strong>Answer 3:</strong></p>
 <p><strong>Question 4:</strong> Is the change in ice-off day (i.e., slope of regression) related to any of the characteristics (latitude, lake area, or tropic status) included in the power point presentation? No need to provide an analysis. Just provide text</p>
 <p><strong>Answer 4:</strong></p>
-<p><strong>Question 5:</strong> What is the predicted ice-off day in 2018 and 2050 for the lake with the largest slope ? How many days earlier is ice-off predicted to occur? Be sure that your predictions are print out to the Knited document.</p>
+<p><strong>Question 5:</strong> What is the predicted ice-off day in 2018 and 2050 for the lake with the largest slope ? How many days earlier is ice-off predicted to occur? Be sure that your predictions are print out to the Knitted document.</p>
 <p><strong>Answer 5:</strong></p>
 <p><strong>Question 6:</strong> If you were to report this prediction to a lake manager, what caveats about this prediction would you also provide?</p>
 <p><strong>Answer 6</strong>:</p>
@@ -560,6 +575,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

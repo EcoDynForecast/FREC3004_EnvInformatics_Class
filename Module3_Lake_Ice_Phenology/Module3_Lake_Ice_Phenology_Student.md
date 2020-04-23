@@ -28,12 +28,26 @@ Are lakes losing ice earlier in the year?
 
 ## Assumed R knowledge
 
-mutate() group\_by() ggplot() geom\_line() geom\_point() select()
-summarize() mean() filter() rename() read\_csv() head()
+  - mutate()
+  - group\_by()
+  - ggplot()
+  - geom\_line()
+  - geom\_point()
+  - select()
+  - summarize()
+  - mean()
+  - filter()
+  - rename()
+  - read\_csv()
+  - head()
 
-## R knowlege covered in module
+## R knowledge covered in module
 
-lm() rbind() geom\_abline() geom\_smooth() geom\_histogram() confint()
+  - lm()
+  - rbind()
+  - geom\_abline()
+  - geom\_smooth()
+  - geom\_histogram()
 
 ## Why this matters
 
@@ -44,7 +58,7 @@ this module, you will explore long-term ice-off datasets from several
 lakes and use linear regression to make predictions about ice-off dates
 in the future.
 
-## Initate project
+## Imitate project
 
 First, create a directory structure for this module (i.e., project).
 
@@ -81,7 +95,7 @@ imported data `ice_data`.
 
 Now look at a preview of the data by just typing the data name
 (`ice_data`). The ‘doy’ in `ice_off_doy` stands for ‘day of year’ and is
-the day within the year where ice off occured.
+the day within the year where ice off occurred.
 
 ``` r
 #INSERT CODE
@@ -107,7 +121,7 @@ You will be using the sunapee data for the rest of the module until
 
 To visualize the data from Lake Sunapee, create an x-y plot with the
 year (`year`) on the x-axis and the day of year (`ice_off_doy`) on the
-y-axis. Plot the points (`geom_point`) and connectthe points with lines
+y-axis. Plot the points (`geom_point`) and connect the points with lines
 (`geom_line`).  
 Be sure that the title, x-axis and y-axis labels are clearly labeled.
 
@@ -122,7 +136,7 @@ approach in this module is to use a simple linear regression. The `lm`
 function will estimate the parameters of the y = mx + b linear
 regression. Use the `lm` function to to predict ice\_off\_doy as a
 function (~) of the year for the data.frame called `sunapee`. Create an
-objectve called `fit` that contains results of the linear model.
+object called `fit` that contains results of the linear model.
 
 ``` r
 fit <- lm(ice_off_doy ~ year, data = sunapee)
@@ -156,10 +170,12 @@ ggplot(data = tibble(value = rnorm(1000, 0, 1))) +
 We will use a histogram to visually assess whether this requirement is
 met. First, you will need to calculate the residuals. The residuals are
 the difference between the ice-off DOY that your linear regression
-predicts and the observed DOY in each year.  
-\- Residuals that do not average to zero indicate that your linear
-regression is biased. - Residuals that have are large indicate that
-youre linear regression is not very useful for prediction.
+predicts and the observed DOY in each year.
+
+  - Residuals that do not average to zero indicate that your linear
+    regression is biased.
+  - Residuals that have are large indicate that your linear regression
+    is not very useful for prediction.
 
 You will use a histogram to examine the residuals. First, the code uses
 the coefficients to predict the ice-off DOY at each year. Second,
@@ -173,7 +189,7 @@ sunapee <- sunapee %>%
 ```
 
 Now to visualize the residuals use `geom_histogram` to plot them as a
-histogram. I recommend using a binwidth of 5 in the histogram.
+histogram. I recommend using a bin width of 5 in the histogram.
 
 ``` r
 ggplot(data = sunapee) +
@@ -201,7 +217,7 @@ the ice-off day using the linear relationship (y = b + mx)
 #INSERT CODE
 ```
 
-## Transform, model, and visualze the data
+## Transform, model, and visualize the data
 
 Create two regression lines that represent a breakpoint in 1970 for the
 regression.
@@ -222,7 +238,7 @@ Second, create a post 1970 dataset (1970 and sooner): You will use the
 #INSERT CODE
 ```
 
-Third, calculate a regression sepearately for the two time periods.
+Third, calculate a regression separately for the two time periods.
 
 ``` r
 #INSERT CODE
@@ -327,7 +343,7 @@ analysis. Just provide text
 **Question 5:** What is the predicted ice-off day in 2018 and 2050 for
 the lake with the largest slope ? How many days earlier is ice-off
 predicted to occur? Be sure that your predictions are print out to the
-Knited document.
+Knitted document.
 
 **Answer 5:**
 
