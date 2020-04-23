@@ -1,4 +1,4 @@
-# Module 5: Terrestrial Phenology
+# Module 8: Terrestrial Phenology
 
 **Module is in draft form**
 
