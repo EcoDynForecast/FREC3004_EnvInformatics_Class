@@ -6,23 +6,23 @@ This module follows the Data Analysis and Visualization in R for Ecologists less
 
 ## Class timing
 
-Seven 1 hour 15 minute class periods
+Seven 75-minute class periods
 
 ### Class Pacing
 
-#### Class period 1 (1 hr - the first 15 minutes were reviewing Module 1)
+#### Class period 1 (60-minutes - the first 15 minutes were reviewing Module 1)
 * Covered "Before we start" to the second Challenge question of "Intro to R"
-#### Class period 2 (1 hr 15 minutes)
+#### Class period 2 (75-minutes)
 * Second Challenge question of "Intro to R" to the start of the second Challenge question in "Starting with Data" 
-#### Class period 3 (1 hr 15 minutes)
+#### Class period 3 (75-minutes)
 * Start of the second Challenge question in "Starting with Data" to the end of "Starting with Data" (minus the last Challenge question)
-#### Class period 4 (1 hr 15 minutes)
+#### Class period 4 (75-minutes)
 * The last Challenge question in "Starting with Data" (skip the Formatting Dates because it was covered in Class 3) to the challenge question right before Reshaping
-#### Class period 5 (1 hr 15 minutes)
+#### Class period 5 (75-minutes)
 * Reviewing the challenge question right before Reshaping through the challenge question for Reshaping.
-#### Class period 6 (1 hr 15 minutes)
+#### Class period 6 (75-minutes)
 * Reviewing the challenge question for Reshaping, saving data, and through the end of the third challenge question of visualization (the one right before time series)
-#### Class period 7 (1 hr 15 minutes)
+#### Class period 7 (75-minutes)
 * Visualization time series through the end of Visualization.
 
 ## Focal dataset

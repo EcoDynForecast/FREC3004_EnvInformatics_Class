@@ -2,7 +2,7 @@
 
 ## Class Time
 
-Two 1 hour 15 minute class periods
+Two 75-minute class periods
 
 ## Focal dataset(s)
 
