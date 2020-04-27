@@ -377,18 +377,36 @@ string_vector</code></pre>
 <p>Often there is information within a string that you want to analyze or use. For example, the object <code>string_vector</code> is a vector of dates in a format that is not commonly used. We are interested in separating the components of each string so that we can figure out which year, month, and day the string is trying to represent.</p>
 <p>Fortunately, there is a set of functions that we can use in R to extract information or modify strings in the <code>stringr</code> package that is part of the tidyverse. The <code>stringr</code> cheatsheet can be found here:</p>
 <p><a href="https://github.com/rstudio/cheatsheets/blob/master/strings.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/master/strings.pdf</a></p>
-<p>First, we we know that the first 4 numbers are the year. We can use the <code>str_sub()</code> to extract the first 4 characters of the string</p>
+<ul>
+<li>We we know that the first 4 numbers are the year. We can use the <code>str_sub()</code> to extract the first 4 characters of the string</li>
+</ul>
 <pre class="r"><code>str_sub(string_vector, start = 1, end = 4)</code></pre>
 <pre><code>## [1] &quot;2019&quot; &quot;2019&quot; &quot;2019&quot;</code></pre>
 <p>likewise we can extract the month using</p>
 <pre class="r"><code>str_sub(string_vector, start = 5, end = 6)</code></pre>
 <pre><code>## [1] &quot;08&quot; &quot;09&quot; &quot;09&quot;</code></pre>
-<p>There are many other functions extract particular sets of characters. For example the <code>str_extract()</code> function pulls out a specified string if present.</p>
+<ul>
+<li>There are many other functions extract particular sets of characters. For example the <code>str_extract()</code> function pulls out a specified string if present.</li>
+</ul>
 <pre class="r"><code>str_extract(string_vector, &quot;09&quot;)</code></pre>
 <pre><code>## [1] NA   &quot;09&quot; &quot;09&quot;</code></pre>
-<p>or you can check whether a string has a particular string within it</p>
+<ul>
+<li>You can check whether a string has a particular string within it</li>
+</ul>
 <pre class="r"><code>str_detect(string_vector, &quot;09&quot;)</code></pre>
 <pre><code>## [1] FALSE  TRUE  TRUE</code></pre>
+<ul>
+<li>If you have a vector of string that you want to break (i.e., split) into parts and you know that they are separated by specific character (like a space - &quot; &quot;), you can use the <code>str_split_fixed()</code> function to split the string up. The <code>pattern</code> is the separating character and the <code>n</code> is the maximum number of parts you want a string split into.</li>
+</ul>
+<pre class="r"><code>species &lt;- c(&quot;Picea abies&quot;,
+             &quot;Schefflera actinophylla&quot;, 
+             &quot;Betula alleghaniensis Britton&quot;)
+split_species &lt;- str_split_fixed(species, pattern = &quot; &quot;, n = 3)
+split_species</code></pre>
+<pre><code>##      [,1]         [,2]             [,3]     
+## [1,] &quot;Picea&quot;      &quot;abies&quot;          &quot;&quot;       
+## [2,] &quot;Schefflera&quot; &quot;actinophylla&quot;   &quot;&quot;       
+## [3,] &quot;Betula&quot;     &quot;alleghaniensis&quot; &quot;Britton&quot;</code></pre>
 <p>There are many other functions that allow you to work with and manupulate strings in R. I recommend looking up the <code>stringr</code> package and the cheatsheet.</p>
 <div id="creating-functions" class="section level2">
 <h2>Creating functions</h2>

@@ -2,12 +2,12 @@
 title: "Module 7 Carbon Stocks"
 author: 'FREC 3004: Environmental Informatics'
 output: 
-    github_document: default
     html_document: default
+    github_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
 ```{r}
@@ -147,7 +147,7 @@ question:
    
 * Provide justification for your ranking.
    
-### Part 2: Examine data products
+### Part 2: Download and Merge data products
 
 Examine the NEON data product
 
@@ -157,31 +157,6 @@ NEON data is organized by data product ID in the NEON Data Portal:
 You will be using the following data product:
 
 * DP1.10098.001 (Woody plant vegetation structure)
-
-For each data product summarize the following based on the documents available 
-in "View Product Details" link associated with each data product. Provide 
-general answers to the following questions.
-
-**Answer the following questions:** 
-
-* How is the plot sampling done for each data product?
-
-* What variables do you need from each data product to calculate the carbon 
-  stocks in vegetation at the site?
-  
-* What measurements are done that will allow for your to calculate vegetation 
-  stocks - refer to **Background on estimating carbon stocks** and the Science
-  Introduction presentation.
-  
-* How is the data in each product organized?
-
-## Part 3: Plan analysis
-
-Using the description about how to calculate the vegetation carbon stocks 
-above, create a bullet list that generally outlines your plan for 
-calculating tree carbon stocks for each of the four sites.
-
-## Part 4: Download and merge NEON data
 
 To download the data from NEON, use the following steps
 
@@ -204,7 +179,7 @@ The files that you downloaded have the data spread across multiple files for
 different months at each site.  To combine all the sites and months into a 
 single file use the following code:
 
-```{r eval = TRUE}
+```{r eval = FALSE}
 stackByTable(filepath= "data_raw/NEON_struct-woody-plant/",
              folder=T)
 ```
@@ -218,7 +193,30 @@ csvs and consult the NEON documentation to understand what variables are in what
 tables.
 
 After you have confirmed that the files are in the folder, set the `eval = FALSE`
-in the chunk
+in the chunk'
+
+## Part 3: Examine data
+
+Based on the important on the data portal for the data product and the 
+`variables.csv` file in your `data_raw/NEON_struct-woody-plant/stackedFiles`:
+
+**Answer the following questions:** 
+
+* Broadly How is the plot sampling done the data product?
+
+* What measurements are done that will allow for your to calculate vegetation 
+  stocks - refer to **Background on estimating carbon stocks** and the Science
+  Introduction presentation.
+  
+* What are the variable names that you will need to use?
+
+* What tables are those variables names found?
+
+## Part 4: Plan analysis
+
+Using the description about how to calculate the vegetation carbon stocks 
+above, create a bullet list that generally outlines your plan for 
+calculating tree carbon stocks for each of the four sites.
 
 ## Part 5: Calculate carbon in live trees
 

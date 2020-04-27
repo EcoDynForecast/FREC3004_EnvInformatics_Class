@@ -27,8 +27,10 @@ the tidyverse. The `stringr` cheatsheet can be found here:
 
 <https://github.com/rstudio/cheatsheets/blob/master/strings.pdf>
 
-First, we we know that the first 4 numbers are the year. We can use the
-`str_sub()` to extract the first 4 characters of the string
+  - We we know that the first 4 numbers are the year. We can use the
+    `str_sub()` to extract the first 4 characters of the string
+
+<!-- end list -->
 
 ``` r
 str_sub(string_vector, start = 1, end = 4)
@@ -44,9 +46,11 @@ str_sub(string_vector, start = 5, end = 6)
 
     ## [1] "08" "09" "09"
 
-There are many other functions extract particular sets of characters.
-For example the `str_extract()` function pulls out a specified string if
-present.
+  - There are many other functions extract particular sets of
+    characters. For example the `str_extract()` function pulls out a
+    specified string if present.
+
+<!-- end list -->
 
 ``` r
 str_extract(string_vector, "09")
@@ -54,13 +58,37 @@ str_extract(string_vector, "09")
 
     ## [1] NA   "09" "09"
 
-or you can check whether a string has a particular string within it
+  - You can check whether a string has a particular string within it
+
+<!-- end list -->
 
 ``` r
 str_detect(string_vector, "09")
 ```
 
     ## [1] FALSE  TRUE  TRUE
+
+  - If you have a vector of string that you want to break (i.e., split)
+    into parts and you know that they are separated by specific
+    character (like a space - " "), you can use the `str_split_fixed()`
+    function to split the string up. The `pattern` is the separating
+    character and the `n` is the maximum number of parts you want a
+    string split into.
+
+<!-- end list -->
+
+``` r
+species <- c("Picea abies",
+             "Schefflera actinophylla", 
+             "Betula alleghaniensis Britton")
+split_species <- str_split_fixed(species, pattern = " ", n = 3)
+split_species
+```
+
+    ##      [,1]         [,2]             [,3]     
+    ## [1,] "Picea"      "abies"          ""       
+    ## [2,] "Schefflera" "actinophylla"   ""       
+    ## [3,] "Betula"     "alleghaniensis" "Britton"
 
 There are many other functions that allow you to work with and
 manupulate strings in R. I recommend looking up the `stringr` package

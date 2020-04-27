@@ -464,8 +464,8 @@ beginning and end of the time period segments that you think have the
 steepest slopes. Remember a rate of change is the temperature change
 divided by the time change
 
-\[Challenge (not graded): Rather than visually selecting a period, write
-code to find which period in the data is the steepest\]
+\[Advance options for solving Question 7: Rather than visually selecting
+a period, write code to find which period in the data is the steepest\]
 
 Using your visual selection or you selection from the challenge, use the
 x-axis values that represent the steepest period to filter the dataset

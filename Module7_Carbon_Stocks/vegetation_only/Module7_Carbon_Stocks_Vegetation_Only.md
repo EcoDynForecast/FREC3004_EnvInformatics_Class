@@ -1,4 +1,4 @@
-Module 9 Carbon Stocks
+Module 7 Carbon Stocks
 ================
 FREC 3004: Environmental Informatics
 
@@ -135,7 +135,7 @@ interested in the following sites:
 
 Explore the descriptions of the NEON sites at
 <https://www.neonscience.org/field-sites/field-sites-map/list>, how the
-sites look on the satallite image in the site description, and your
+sites look on the satellite image in the site description, and your
 general knowledge about ecosystem science to develop your hypothesized
 for the following question:
 
@@ -145,35 +145,16 @@ for the following question:
 
   - Provide justification for your ranking.
 
-### Part 2: Examine data products
+### Part 2: Download and Merge data products
 
-Examine data products
+Examine the NEON data product
 
 NEON data is organized by data product ID in the NEON Data Portal:
-<https://data.neonscience.org/static/browse.html>
+<https://data.neonscience.org/data-products/explore>
 
 You will be using the following data product:
 
   - DP1.10098.001 (Woody plant vegetation structure)
-
-For each data product summarize the following based on the documents
-available in “View Product Details” link associated with each data
-product. Answers to the following questions.
-
-  - How is the plot sampling done for each data product?
-  - What variables do you need from each data product to calculate the
-    carbon stocks in vegetation at the site?
-  - What measurements are done that will allow for your to calculate
-    vegetation stocks - refer to Step 2 and the presentation.
-  - How is the data in each product organized?
-
-## Part 3: Plan analysis
-
-Using the description about how to calculate the vegetation carbon
-stocks above, create a bulleted list that outlines your plan for
-calculating tree carbon stocks for each of the four sites.
-
-## Part 4: Download and merge NEON data
 
 To download the data from NEON, use the following steps
 
@@ -210,7 +191,31 @@ open the csvs and consult the NEON documentation to understand what
 variables are in what tables.
 
 After you have confirmed that the files are in the folder, set the `eval
-= FALSE` in the chunk
+= FALSE` in the chunk’
+
+## Part 3: Examine data
+
+Based on the important on the data portal for the data product and the
+`variables.csv` file in your
+`data_raw/NEON_struct-woody-plant/stackedFiles`:
+
+**Answer the following questions:**
+
+  - Broadly How is the plot sampling done the data product?
+
+  - What measurements are done that will allow for your to calculate
+    vegetation stocks - refer to **Background on estimating carbon
+    stocks** and the Science Introduction presentation.
+
+  - What are the variable names that you will need to use?
+
+  - What tables are those variables names found?
+
+## Part 4: Plan analysis
+
+Using the description about how to calculate the vegetation carbon
+stocks above, create a bullet list that generally outlines your plan for
+calculating tree carbon stocks for each of the four sites.
 
 ## Part 5: Calculate carbon in live trees
 
@@ -220,8 +225,8 @@ the four sites. For each site, you should have a *site-level* mean
 carbon stock in *live trees* for each year that was sampled. Your
 estimate will be from the plots that are sampling the ecosystem under
 the flux tower - called “tower plots”. See
-<https://www.neonscience.org/field-sites/field-sites-map/HARV> for an
-example map of a plot with the tower plots labeled.
+<https://www.neonscience.org/field-sites/field-sites-map/BART> for an
+example map of a plot with the tower plots labeled (Tower Base Plot)
 
 Hints for calculating carbon in live trees:
 
@@ -257,7 +262,7 @@ Hints for calculating carbon in live trees:
     are very uncommon species to it won’t influence your answer much).
     The parameters we use come from Table 4 in the Jenkins et al. 2003
     paper on Canvas.
-  - The equation for coverting diameter to biomass is at the bottom of
+  - The equation for converting diameter to biomass is at the bottom of
     Table 4 in Jenkins et al. 2003. The equation uses B0 and B1 from
     “Allometrics.csv”.
   - The site level value is the average across plots. Don’t forget that
@@ -280,8 +285,8 @@ stocks** about how to calculate carbon stocks.
 I am looking the following plots, tables, and text in the Rmarkdown
 document:
 
-  - A figure showing the average live tree carbon stocks in each site
-    and year
+  - A figure showing the mean live tree carbon stocks in each site and
+    year
 
 <!-- end list -->
 
@@ -300,10 +305,10 @@ document:
 ```
 
   - Text describing issues that you had with your analysis, concerns you
-    have with your analysis, concerns you have with the data
+    have with your analysis, and concerns you have with the data.
 
   - Text describing whether your data analysis supported your hypothesis
     from Part \#1 and, if not, possible reasons why it did not.
 
 Be sure your figures are complete with units, labels, and a title. Be
-sure your figures are legible when knitted.
+sure your figures and tables are legible when knitted.

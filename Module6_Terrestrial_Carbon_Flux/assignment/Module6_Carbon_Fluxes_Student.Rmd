@@ -2,12 +2,12 @@
 title: 'Module 6: Terrestrial Carbon Flux'
 author: "FREC 3004 Environmental Informatics"
 output:  
-  github_document: default
   html_document: default
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
 ```
 
 

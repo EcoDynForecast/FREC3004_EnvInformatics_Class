@@ -34,7 +34,7 @@ tidyverse.  The `stringr` cheatsheet can be found here:
 
 https://github.com/rstudio/cheatsheets/blob/master/strings.pdf
 
-First, we we know that the first 4 numbers are the year. We can use the 
+* We we know that the first 4 numbers are the year. We can use the 
 `str_sub()` to extract the first 4 characters of the string
 
 ```{r}
@@ -47,17 +47,32 @@ likewise we can extract the month using
 str_sub(string_vector, start = 5, end = 6)
 ```
 
-There are many other functions extract particular sets of characters.  For 
+* There are many other functions extract particular sets of characters.  For 
 example the `str_extract()` function pulls out a specified string if present.
 
 ```{r}
 str_extract(string_vector, "09")
 ```
 
-or you can check whether a string has a particular string within it
+* You can check whether a string has a particular string within it
 
 ```{r}
 str_detect(string_vector, "09")
+```
+
+* If you have a vector of string that you want to break (i.e., split) 
+into parts and you know that they are separated by specific character 
+(like a space - " "), you can use the `str_split_fixed()` function to split the 
+string up. The `pattern` is the separating character and the `n` is the maximum 
+number of parts you want a string split into.
+
+```{r}
+species <- c("Picea abies",
+             "Schefflera actinophylla", 
+             "Betula alleghaniensis Britton")
+split_species <- str_split_fixed(species, pattern = " ", n = 3)
+split_species
+
 ```
 
 There are many other functions that allow you to work with and manupulate 
