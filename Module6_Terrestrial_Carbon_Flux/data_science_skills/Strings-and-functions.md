@@ -68,20 +68,41 @@ str_detect(string_vector, "09")
 
     ## [1] FALSE  TRUE  TRUE
 
-  - If you have a vector of string that you want to break (i.e., split)
-    into parts and you know that they are separated by specific
-    character (like a space - " "), you can use the `str_split_fixed()`
-    function to split the string up. The `pattern` is the separating
-    character and the `n` is the maximum number of parts you want a
-    string split into.
+  - If you have a vector of string that you want to separate into parts
+    and you know that they are separated by specific character (like a
+    space - " "), you can use the `separate` function to separate the
+    string. The `sep` is the separating character and the `into` is the
+    name of the columns that you want to save each part.
 
 <!-- end list -->
 
 ``` r
-species <- c("Picea abies",
-             "Schefflera actinophylla", 
-             "Betula alleghaniensis Britton")
-split_species <- str_split_fixed(species, pattern = " ", n = 3)
+species <- tibble(species = c("Picea abies",
+                              "Schefflera actinophylla",
+                              "Betula alleghaniensis Britton"))
+
+split_species <- species %>% 
+separate(species, sep = " ", into = c("GENUS", "SPECIES", "Other"))
+```
+
+    ## Warning: Expected 3 pieces. Missing pieces filled with `NA` in 2 rows [1, 2].
+
+``` r
+split_species
+```
+
+    ## # A tibble: 3 x 3
+    ##   GENUS      SPECIES        Other  
+    ##   <chr>      <chr>          <chr>  
+    ## 1 Picea      abies          <NA>   
+    ## 2 Schefflera actinophylla   <NA>   
+    ## 3 Betula     alleghaniensis Britton
+
+The `str_split_fixed()` can do the same thing but it does not work as
+well with piping and does not name the columns
+
+``` r
+split_species <- str_split_fixed(species$species, pattern = " ", n = 3)
 split_species
 ```
 

@@ -396,12 +396,24 @@ string_vector</code></pre>
 <pre class="r"><code>str_detect(string_vector, &quot;09&quot;)</code></pre>
 <pre><code>## [1] FALSE  TRUE  TRUE</code></pre>
 <ul>
-<li>If you have a vector of string that you want to break (i.e., split) into parts and you know that they are separated by specific character (like a space - &quot; &quot;), you can use the <code>str_split_fixed()</code> function to split the string up. The <code>pattern</code> is the separating character and the <code>n</code> is the maximum number of parts you want a string split into.</li>
+<li>If you have a vector of string that you want to separate into parts and you know that they are separated by specific character (like a space - &quot; &quot;), you can use the <code>separate</code> function to separate the string. The <code>sep</code> is the separating character and the <code>into</code> is the name of the columns that you want to save each part.</li>
 </ul>
-<pre class="r"><code>species &lt;- c(&quot;Picea abies&quot;,
-             &quot;Schefflera actinophylla&quot;, 
-             &quot;Betula alleghaniensis Britton&quot;)
-split_species &lt;- str_split_fixed(species, pattern = &quot; &quot;, n = 3)
+<pre class="r"><code>species &lt;- tibble(species = c(&quot;Picea abies&quot;,
+                              &quot;Schefflera actinophylla&quot;,
+                              &quot;Betula alleghaniensis Britton&quot;))
+
+split_species &lt;- species %&gt;% 
+separate(species, sep = &quot; &quot;, into = c(&quot;GENUS&quot;, &quot;SPECIES&quot;, &quot;Other&quot;))</code></pre>
+<pre><code>## Warning: Expected 3 pieces. Missing pieces filled with `NA` in 2 rows [1, 2].</code></pre>
+<pre class="r"><code>split_species</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   GENUS      SPECIES        Other  
+##   &lt;chr&gt;      &lt;chr&gt;          &lt;chr&gt;  
+## 1 Picea      abies          &lt;NA&gt;   
+## 2 Schefflera actinophylla   &lt;NA&gt;   
+## 3 Betula     alleghaniensis Britton</code></pre>
+<p>The <code>str_split_fixed()</code> can do the same thing but it does not work as well with piping and does not name the columns</p>
+<pre class="r"><code>split_species &lt;- str_split_fixed(species$species, pattern = &quot; &quot;, n = 3)
 split_species</code></pre>
 <pre><code>##      [,1]         [,2]             [,3]     
 ## [1,] &quot;Picea&quot;      &quot;abies&quot;          &quot;&quot;       

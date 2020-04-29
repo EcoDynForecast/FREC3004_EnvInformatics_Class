@@ -67,11 +67,14 @@ ecosystem is it stored?
   - add\_predictions()
   - add\_residuals()
   - make\_datetime()
+  - separate()
   - Creating simple functions
 
 ## R knowledge covered in module
 
   - NEON specific functions (stackByTable())
+  - distinct()
+  - kable()
 
 ## Background on carbon and climate
 
@@ -201,15 +204,36 @@ Based on the important on the data portal for the data product and the
 
 **Answer the following questions:**
 
-  - Broadly How is the plot sampling done the data product?
+1)  How are the following columns in the data product related?
 
-  - What measurements are done that will allow for your to calculate
-    vegetation stocks - refer to **Background on estimating carbon
-    stocks** and the Science Introduction presentation.
+<!-- end list -->
 
-  - What are the variable names that you will need to use?
+  - siteID:
+  - plotID:
+  - individualID:
+  - eventID:
+  - date:
 
-  - What tables are those variables names found?
+<!-- end list -->
+
+2)  What information to you need to calculate live vegetation stocks at
+    the individual tree, plot, and site level - refer to **Background on
+    estimating carbon stocks** and the Science Introduction
+    presentation.
+
+<!-- end list -->
+
+  - individual tree:
+  - plot:
+  - site:
+
+<!-- end list -->
+
+3)  Based you answer to \#2, what are the variable names in the data
+    product have the information that you need?
+
+4)  Based you answer to \#3, what tables are those variables names
+    found?
 
 ## Part 4: Plan analysis
 
@@ -217,27 +241,32 @@ Using the description about how to calculate the vegetation carbon
 stocks above, create a bullet list that generally outlines your plan for
 calculating tree carbon stocks for each of the four sites.
 
+  - Step 1:
+  - Step 2:
+  - Step …
+
 ## Part 5: Calculate carbon in live trees
 
 This step will challenge you to develop a workflow using the data
 science skills to calculate the carbon stocks in live trees at each of
-the four sites. For each site, you should have a *site-level* mean
-carbon stock in *live trees* for each year that was sampled. Your
+the four sites. For each site, you should have a **site-level** mean
+carbon stock in **live trees** for **each year** with measurements. Your
 estimate will be from the plots that are sampling the ecosystem under
-the flux tower - called “tower plots”. See
+the flux tower - called **tower** plots. See
 <https://www.neonscience.org/field-sites/field-sites-map/BART> for an
 example map of a plot with the tower plots labeled (Tower Base Plot)
 
 Hints for calculating carbon in live trees:
 
-  - Remember that individual trees are within plots that have a set
-    area.  
-    Individual trees and plots are remeasured through time.
   - The `plantStatus` column has whether the tree was live at the time
     of measurement, but there are multiple types of live trees. Be sure
     your analysis includes all the types of live trees. You may need to
     use string manipulation and filter functions in the `stringr`
     package.
+  - You will need to use function `distinct(plotID, .keep_all = TRUE)`
+    on the plot table to only use each plotID once. `distinct()` is
+    similar to `unique()` and will find the unique plotIDs. .keep\_all =
+    TRUE will keep the other data associated with each plotID.
   - Remember that only 50% of biomass is carbon so you will need to
     convert from biomass to carbon
   - Assume that belowground biomass (i.e., roots) is 30% of aboveground
@@ -245,33 +274,24 @@ Hints for calculating carbon in live trees:
   - Be very careful with the units at each step: the final units should
     be kgC m^-2 (Kilogram of carbon per meter squared). The order of
     magnitude should be 1 - 100.  
-  - The information that you need is found across multiple tables.
-    Joining tables can be tricky because the plot table has repeating
-    plotIDs, resulting in duplicated values when you join. The function
-    `distinct(plotID, .keep_all = TRUE)` can be used to select each
-    plotID only once.
   - The Climate Action Reserve project (an official carbon accounting
     organization for the California Carbon Exchange) provides allometric
     relationships to use. The allometric equations for each species can
     be found in the file “Allometrics.csv” on modules. Places this file
-    in you `data_raw` directory. You will need to join the parameters in
-    “Allometrics.csv” to your data frame with the diameter measurements.
-    If a species is not in the list of allometric relationships it
-    should have an NA when you join, just pick one set of allometric
-    parameters to to use and assign it to all species with NAs (these
-    are very uncommon species to it won’t influence your answer much).
-    The parameters we use come from Table 4 in the Jenkins et al. 2003
-    paper on Canvas.
+    in you `data_raw` directory. You will need to **join** the
+    parameters (B0 and B1) in “Allometrics.csv” to your data frame with
+    the diameter measurements. If a species is not in the list of
+    allometric relationships it should have an NA when you join, just
+    pick one set of allometric parameters to to use and assign it to all
+    species with NAs (these are very uncommon species to it won’t
+    influence your answer much). The parameters we use come from Table 4
+    in the Jenkins et al. 2003 paper on Canvas.
   - The equation for converting diameter to biomass is at the bottom of
     Table 4 in Jenkins et al. 2003. The equation uses B0 and B1 from
     “Allometrics.csv”.
-  - The site level value is the average across plots. Don’t forget that
-    we are only interested in the “Tower” plots.
-  - Remember that each plot represents an area of forest where all the
-    trees are measured.  
-  - All values of carbon stocks should be in kg C per m2. You final
-    vegetation stock numbers for the site should be an average across
-    all ‘tower’ plots.
+  - The **site level** value in each year is the mean of the plots at
+    the site. Don’t forget that we are only interested in the “Tower”
+    plots.
 
 Remember to review the description in **Background on estimating carbon
 stocks** about how to calculate carbon stocks.
@@ -282,7 +302,7 @@ stocks** about how to calculate carbon stocks.
 
 ## Part 6: Create report
 
-I am looking the following plots, tables, and text in the Rmarkdown
+I am looking for the following plots, tables, and text in the Rmarkdown
 document:
 
   - A figure showing the mean live tree carbon stocks in each site and
